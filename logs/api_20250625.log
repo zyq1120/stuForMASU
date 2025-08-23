@@ -1,0 +1,930 @@
+[2025-06-25 18:18:31,558] INFO in api_server: 【日志测试】setup_logging已执行，日志文件: D:\Zyq\桌面\stu\stu\logs\api_20250625.log
+[2025-06-25 18:18:31,559] INFO in api_server: 【日志测试】主入口已执行
+[2025-06-25 18:18:31,561] INFO in api_server: 【日志测试】Flask主进程启动
+[2025-06-25 18:18:31,561] INFO in api_server: [自动初始化] 正在检测并创建数据库及表...
+[2025-06-25 18:18:32,636] INFO in api_server: [自动初始化] 数据库和表结构已就绪！
+[2025-06-25 18:18:32,637] INFO in api_server: 正在启动学生数据提取API服务器...
+[2025-06-25 18:18:32,638] INFO in api_server: 可用接口:
+[2025-06-25 18:18:32,639] INFO in api_server:   POST /extract - 提取学生数据
+[2025-06-25 18:18:32,639] INFO in api_server:   GET  /health  - 健康检查
+[2025-06-25 18:18:32,695] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.169:5000
+[2025-06-25 18:18:32,695] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-06-25 18:18:46,334] INFO in api_server: 【日志测试】收到/extract请求
+[2025-06-25 18:18:46,335] INFO in api_server: 收到数据提取请求 - 时间: 2025-06-25 18:18:46.335207
+[2025-06-25 18:18:46,336] INFO in api_server: 请求数据: {'student_id': '242040390', 'password': 'Zzhouyu007'}
+[2025-06-25 18:18:46,336] INFO in api_server: 开始处理用户: 242040390
+[2025-06-25 18:18:46,336] INFO in api_server: 数据提取器实例创建成功
+[2025-06-25 18:18:46,336] INFO in data_extractor: 开始处理用户: 242040390
+[2025-06-25 18:18:46,337] INFO in data_extractor: 开始为用户 242040390 提取和保存数据
+[2025-06-25 18:18:46,337] INFO in data_extractor: 步骤0: 检查用户是否已存在于数据库中
+[2025-06-25 18:18:47,309] INFO in data_extractor: 用户 242040390 已存在: 周宇清 - 将更新数据
+[2025-06-25 18:18:47,310] INFO in data_extractor: 步骤1: 登录系统
+[2025-06-25 18:18:47,310] INFO in data_extractor: 开始登录用户: 242040390
+[2025-06-25 18:18:47,311] INFO in data_extractor: 正在获取登录页面...
+[2025-06-25 18:18:47,492] INFO in data_extractor: 登录页面响应状态: 200
+[2025-06-25 18:18:47,493] INFO in data_extractor: 密码加密前缀: f841388f-8855-46d1-8f3f-9b3b37abfae5-
+[2025-06-25 18:18:47,493] INFO in data_extractor: 准备发送登录请求，等待1秒...
+[2025-06-25 18:18:48,632] INFO in data_extractor: 登录响应状态码: 200
+[2025-06-25 18:18:48,633] INFO in data_extractor: 登录响应URL: https://jwxt.masu.edu.cn:443/eams/home.action
+[2025-06-25 18:18:48,634] INFO in data_extractor: 登录成功 - 检测到系统主页面
+[2025-06-25 18:18:48,634] INFO in data_extractor: 登录成功: 登录成功
+[2025-06-25 18:18:48,635] INFO in data_extractor: 步骤2: 获取学生信息
+[2025-06-25 18:18:48,635] INFO in data_extractor: 开始获取学生信息...
+[2025-06-25 18:18:48,635] INFO in data_extractor: 尝试从 https://jwxt.masu.edu.cn/eams/stdDetail.action 获取详细学生信息...
+[2025-06-25 18:18:48,723] INFO in data_extractor: ✅ 学号: 242040390
+[2025-06-25 18:18:48,723] INFO in data_extractor: ✅ 姓名: 周宇清
+[2025-06-25 18:18:48,724] INFO in data_extractor: ✅ 性别: 男
+[2025-06-25 18:18:48,724] INFO in data_extractor: ✅ 年级: 2024
+[2025-06-25 18:18:48,724] INFO in data_extractor: ✅ 学制: 2
+[2025-06-25 18:18:48,724] INFO in data_extractor: ✅ 项目: 本科
+[2025-06-25 18:18:48,725] INFO in data_extractor: ✅ 学历层次: 专科起点本科
+[2025-06-25 18:18:48,725] INFO in data_extractor: ✅ 学生类别: 普通本科生
+[2025-06-25 18:18:48,725] INFO in data_extractor: ✅ 院系: 大数据与人工智能学院
+[2025-06-25 18:18:48,725] INFO in data_extractor: ✅ 专业: 软件工程（专升本）
+[2025-06-25 18:18:48,726] INFO in data_extractor: ✅ 入校时间: 2024-09-07
+[2025-06-25 18:18:48,726] INFO in data_extractor: ✅ 毕业时间: 2026-07-01
+[2025-06-25 18:18:48,726] INFO in data_extractor: ✅ 行政管理院系: 大数据与人工智能学院
+[2025-06-25 18:18:48,726] INFO in data_extractor: ✅ 是否在籍: 是
+[2025-06-25 18:18:48,727] INFO in data_extractor: ✅ 是否在校: 是
+[2025-06-25 18:18:48,727] INFO in data_extractor: ✅ 所属班级: 软升243
+[2025-06-25 18:18:48,727] INFO in data_extractor: ✅ 是否有学籍: 是
+[2025-06-25 18:18:48,727] INFO in data_extractor: ✅ 学籍状态: 在校
+[2025-06-25 18:18:48,728] INFO in data_extractor: ✅ 民族: 汉族
+[2025-06-25 18:18:48,728] INFO in data_extractor: ✅ 健康状况: 健康
+[2025-06-25 18:18:48,728] INFO in data_extractor: ✅ 政治面貌: 共青团员
+[2025-06-25 18:18:48,728] INFO in data_extractor: 从表格中找到 21 个字段
+[2025-06-25 18:18:48,729] INFO in data_extractor: 最终获取的学生信息: {'student_id': '242040390', 'student_name': '周宇清', 'major': '软件工程（专升本）', 'department': '大数据与人工智能学院', 'grade': '2024', 'class_name': '软升243', 'student_type': '普通本科生', 'enrollment_date': '2024-09-07', 'graduation_date': '2026-07-01', 'study_duration': '2', 'gender': '男', 'political_status': '共青团员', 'ethnic_group': '汉族', 'health_status': '健康', 'campus': '', 'student_status': '在校', 'is_enrolled': '是', 'is_on_campus': '是', 'project_type': '本科', 'education_level': '专科起点本科'}
+[2025-06-25 18:18:48,729] INFO in data_extractor: 过滤后student_info: {'student_id': '242040390', 'student_name': '周宇清', 'major': '软件工程（专升本）', 'department': '大数据与人工智能学院', 'grade': '2024', 'class_name': '软升243', 'student_type': '普通本科生', 'enrollment_date': '2024-09-07', 'graduation_date': '2026-07-01', 'study_duration': '2', 'gender': '男', 'political_status': '共青团员', 'ethnic_group': '汉族', 'health_status': '健康', 'campus': '', 'student_status': '在校', 'is_enrolled': '是', 'is_on_campus': '是', 'project_type': '本科', 'education_level': '专科起点本科'}
+[2025-06-25 18:18:48,729] INFO in data_extractor: 成功获取学生信息: 周宇清 (242040390)
+[2025-06-25 18:18:48,729] INFO in data_extractor: 步骤3: 获取课程表数据
+[2025-06-25 18:18:48,729] INFO in data_extractor: 开始获取课程表数据...
+[2025-06-25 18:18:48,729] INFO in data_extractor: 尝试获取课表框架页面: https://jwxt.masu.edu.cn/eams/courseTableForStd.action
+[2025-06-25 18:18:48,779] INFO in data_extractor: 尝试获取 project.id 从: https://jwxt.masu.edu.cn/eams/dataQuery.action
+[2025-06-25 18:18:48,820] INFO in data_extractor: 获取到的 project.id: 1
+[2025-06-25 18:18:48,820] INFO in data_extractor: 自动提取到课表ids: 41657
+[2025-06-25 18:18:48,821] INFO in data_extractor: 尝试获取实际课表数据从: https://jwxt.masu.edu.cn/eams/courseTableForStd!courseTable.action
+[2025-06-25 18:18:49,231] INFO in data_extractor: 解析到 11 门课程
+[2025-06-25 18:18:49,231] INFO in data_extractor: 获取到 11 条课程记录
+[2025-06-25 18:18:49,231] INFO in data_extractor: 步骤4: 获取考试数据
+[2025-06-25 18:18:49,231] INFO in data_extractor: 开始获取考试数据...
+[2025-06-25 18:18:49,232] INFO in data_extractor: 尝试从 https://jwxt.masu.edu.cn/eams/stdExamTable.action 获取考试批次...
+[2025-06-25 18:18:49,287] INFO in data_extractor: 找到考试批次ID: 661 - 2024-2025-2期末考试
+[2025-06-25 18:18:49,287] INFO in data_extractor: 尝试获取批次 661 的考试安排...
+[2025-06-25 18:18:49,384] INFO in data_extractor: 批次 661 表格标题: ['课程序号', '课程名称', '考试类别', '考试日期', '考试安排', '考试地点', '考场座位号', '考试情况', '其它说明']
+[2025-06-25 18:18:49,384] INFO in data_extractor: 批次 661 字段映射: {'course_name': 1, 'exam_type': 2, 'exam_date': 3, 'exam_time': 4, 'classroom': 5, 'seat_number': 6}
+[2025-06-25 18:18:49,384] INFO in data_extractor: [考试原始数据] 课程名: '数据库原理与应用', 类型: '期末考试', 日期: '2025-06-23'
+[2025-06-25 18:18:49,384] INFO in data_extractor: 找到考试: 数据库原理与应用 - 2025-06-23 - E311
+[2025-06-25 18:18:49,385] INFO in data_extractor: [考试原始数据] 课程名: 'Python程序设计', 类型: '期末考试', 日期: '2025-06-11'
+[2025-06-25 18:18:49,385] INFO in data_extractor: 找到考试: Python程序设计 - 2025-06-11 - 3号实验楼106
+[2025-06-25 18:18:49,385] INFO in data_extractor: [考试原始数据] 课程名: '操作系统', 类型: '期末考试', 日期: '2025-06-25'
+[2025-06-25 18:18:49,385] INFO in data_extractor: 找到考试: 操作系统 - 2025-06-25 - E209
+[2025-06-25 18:18:49,385] INFO in data_extractor: [考试原始数据] 课程名: '《汉书》导读', 类型: '期末考试', 日期: '时间未安排'
+[2025-06-25 18:18:49,385] INFO in data_extractor: 找到考试: 《汉书》导读 - 时间未安排 - 地点未安排
+[2025-06-25 18:18:49,386] INFO in data_extractor: 批次 661 共找到 4 条考试记录
+[2025-06-25 18:18:49,386] INFO in data_extractor: 总共解析到 4 条考试安排
+[2025-06-25 18:18:49,386] INFO in data_extractor: 去重后保留 4 条考试安排
+[2025-06-25 18:18:49,386] INFO in data_extractor: 获取到 4 条考试记录
+[2025-06-25 18:18:49,386] INFO in data_extractor: 步骤5: 获取成绩数据
+[2025-06-25 18:18:49,386] INFO in data_extractor: 开始获取成绩数据...
+[2025-06-25 18:18:49,386] INFO in data_extractor: 尝试从 https://jwxt.masu.edu.cn/eams/teach/grade/course/person!historyCourseGrade.action?projectType=MAJOR 获取成绩数据...
+[2025-06-25 18:18:49,459] INFO in data_extractor: 成绩表格标题: ['学年度', '学期', '门数', '总学分', '平均绩点']
+[2025-06-25 18:18:49,460] INFO in data_extractor: 成绩字段映射: {'credits': 3, 'grade_point': 4, 'semester': 1}
+[2025-06-25 18:18:49,460] WARNING in data_extractor: 跳过空课程名的成绩记录: {'course_name': '', 'course_code': '', 'credits': 5.0, 'grade': '', 'grade_point': 3.76, 'semester': '2', 'exam_type': '', 'course_type': '专业课', 'teacher': ''}
+[2025-06-25 18:18:49,460] WARNING in data_extractor: 跳过空课程名的成绩记录: {'course_name': '', 'course_code': '', 'credits': 20.0, 'grade': '', 'grade_point': 3.19, 'semester': '1', 'exam_type': '', 'course_type': '专业课', 'teacher': ''}
+[2025-06-25 18:18:49,461] WARNING in data_extractor: 跳过空课程名的成绩记录: {'course_name': '', 'course_code': '', 'credits': 3.3, 'grade': '', 'grade_point': None, 'semester': '14', 'exam_type': '', 'course_type': '专业课', 'teacher': ''}
+[2025-06-25 18:18:49,461] INFO in data_extractor: 成绩表格标题: ['学年学期', '课程代码', '课程序号', '课程名称', '课程类别', '学分', '总评成绩', '最终', '绩点']
+[2025-06-25 18:18:49,462] INFO in data_extractor: 成绩字段映射: {'course_name': 3, 'course_code': 1, 'credits': 5, 'grade': 6, 'grade_point': 8, 'semester': 0}
+[2025-06-25 18:18:49,462] INFO in data_extractor: [成绩原始数据] 课程名: '大学生职业发展与就业指导1', 课程代码: '42202001', 成绩: '良好'
+[2025-06-25 18:18:49,462] INFO in data_extractor: 找到成绩: 大学生职业发展与就业指导1 - 良好 - 2024-2025 1
+[2025-06-25 18:18:49,463] INFO in data_extractor: [成绩原始数据] 课程名: '数据结构', 课程代码: '04212002', 成绩: '75'
+[2025-06-25 18:18:49,463] INFO in data_extractor: 找到成绩: 数据结构 - 75 - 2024-2025 1
+[2025-06-25 18:18:49,463] INFO in data_extractor: [成绩原始数据] 课程名: 'Java面向对象编程技术', 课程代码: '04212001', 成绩: '99'
+[2025-06-25 18:18:49,463] INFO in data_extractor: 找到成绩: Java面向对象编程技术 - 99 - 2024-2025 1
+[2025-06-25 18:18:49,464] INFO in data_extractor: [成绩原始数据] 课程名: '数据结构课程设计', 课程代码: '04232001', 成绩: '良好'
+[2025-06-25 18:18:49,464] INFO in data_extractor: 找到成绩: 数据结构课程设计 - 良好 - 2024-2025 1
+[2025-06-25 18:18:49,464] INFO in data_extractor: [成绩原始数据] 课程名: '形势与政策1', 课程代码: '11202001', 成绩: '优秀'
+[2025-06-25 18:18:49,464] INFO in data_extractor: 找到成绩: 形势与政策1 - 优秀 - 2024-2025 1
+[2025-06-25 18:18:49,465] INFO in data_extractor: [成绩原始数据] 课程名: '网页设计', 课程代码: '04462001', 成绩: '84'
+[2025-06-25 18:18:49,465] INFO in data_extractor: 找到成绩: 网页设计 - 84 - 2024-2025 1
+[2025-06-25 18:18:49,465] INFO in data_extractor: [成绩原始数据] 课程名: '当代大学生国家安全教育', 课程代码: '19151902', 成绩: '93'
+[2025-06-25 18:18:49,465] INFO in data_extractor: 找到成绩: 当代大学生国家安全教育 - 93 - 2024-2025 1
+[2025-06-25 18:18:49,465] INFO in data_extractor: [成绩原始数据] 课程名: '中药学', 课程代码: '19102013', 成绩: '94'
+[2025-06-25 18:18:49,466] INFO in data_extractor: 找到成绩: 中药学 - 94 - 2024-2025 1
+[2025-06-25 18:18:49,466] INFO in data_extractor: [成绩原始数据] 课程名: '计算机通信网络技术', 课程代码: '04222003', 成绩: '66'
+[2025-06-25 18:18:49,466] INFO in data_extractor: 找到成绩: 计算机通信网络技术 - 66 - 2024-2025 1
+[2025-06-25 18:18:49,466] INFO in data_extractor: [成绩原始数据] 课程名: '世界建筑史', 课程代码: '19122207', 成绩: '99'
+[2025-06-25 18:18:49,467] INFO in data_extractor: 找到成绩: 世界建筑史 - 99 - 2024-2025 1
+[2025-06-25 18:18:49,467] INFO in data_extractor: [成绩原始数据] 课程名: '计算机组成原理', 课程代码: '04212401', 成绩: '83'
+[2025-06-25 18:18:49,467] INFO in data_extractor: 找到成绩: 计算机组成原理 - 83 - 2024-2025 1
+[2025-06-25 18:18:49,467] INFO in data_extractor: [成绩原始数据] 课程名: '《汉书》导读', 课程代码: '19102012', 成绩: '98'
+[2025-06-25 18:18:49,468] INFO in data_extractor: 找到成绩: 《汉书》导读 - 98 - 2024-2025 2
+[2025-06-25 18:18:49,468] INFO in data_extractor: [成绩原始数据] 课程名: 'Java Web程序设计[E]', 课程代码: '04462002', 成绩: '86'
+[2025-06-25 18:18:49,468] INFO in data_extractor: 找到成绩: Java Web程序设计[E] - 86 - 2024-2025 2
+[2025-06-25 18:18:49,468] INFO in data_extractor: [成绩原始数据] 课程名: '中国陶瓷鉴赏与器物陈设', 课程代码: '19122202', 成绩: '93'
+[2025-06-25 18:18:49,468] INFO in data_extractor: 找到成绩: 中国陶瓷鉴赏与器物陈设 - 93 - 2024-2025 2
+[2025-06-25 18:18:49,468] INFO in data_extractor: 从 https://jwxt.masu.edu.cn/eams/teach/grade/course/person!historyCourseGrade.action?projectType=MAJOR 找到 14 条成绩记录
+[2025-06-25 18:18:49,468] INFO in data_extractor: 总共解析到 14 条成绩记录
+[2025-06-25 18:18:49,468] INFO in data_extractor: 去重后保留 14 条成绩记录
+[2025-06-25 18:18:49,469] INFO in data_extractor: 获取到 14 条成绩记录
+[2025-06-25 18:18:49,469] INFO in data_extractor: 步骤6: 保存数据到数据库
+[2025-06-25 18:18:49,469] INFO in data_extractor: 原始student_info: {'student_id': '242040390', 'student_name': '周宇清', 'major': '软件工程（专升本）', 'department': '大数据与人工智能学院', 'grade': '2024', 'class_name': '软升243', 'student_type': '普通本科生', 'enrollment_date': '2024-09-07', 'graduation_date': '2026-07-01', 'study_duration': '2', 'gender': '男', 'political_status': '共青团员', 'ethnic_group': '汉族', 'health_status': '健康', 'campus': '', 'student_status': '在校', 'is_enrolled': '是', 'is_on_campus': '是', 'project_type': '本科', 'education_level': '专科起点本科'}
+[2025-06-25 18:18:49,872] INFO in data_extractor: 更新学生信息: 周宇清
+[2025-06-25 18:18:49,872] INFO in data_extractor: 正在保存学生登录凭据...
+[2025-06-25 18:18:49,943] INFO in data_extractor: 更新学生凭据: 周宇清 (242040390)
+[2025-06-25 18:18:50,057] INFO in data_extractor: 正在清理和标准化数据...
+[2025-06-25 18:18:50,057] INFO in data_extractor: 建立教师映射: 形势与政策2 → 杨文文,檀敏,张焱,张安琪
+[2025-06-25 18:18:50,058] INFO in data_extractor: 建立教师映射: Java Web程序设计[E] → 郑一然
+[2025-06-25 18:18:50,058] INFO in data_extractor: 建立教师映射: Java Web程序设计[E] → 郑一然
+[2025-06-25 18:18:50,058] INFO in data_extractor: 建立教师映射: Java Web程序设计[E] → 郑一然
+[2025-06-25 18:18:50,058] INFO in data_extractor: 建立教师映射: Python程序设计 → 钱惠梦
+[2025-06-25 18:18:50,058] INFO in data_extractor: 建立教师映射: Python程序设计 → 钱惠梦
+[2025-06-25 18:18:50,058] INFO in data_extractor: 建立教师映射: 大学生职业发展与就业指导2 → 陈珊珊
+[2025-06-25 18:18:50,058] INFO in data_extractor: 建立教师映射: 操作系统 → 王媛媛
+[2025-06-25 18:18:50,058] INFO in data_extractor: 建立教师映射: 操作系统 → 王媛媛
+[2025-06-25 18:18:50,058] INFO in data_extractor: 建立教师映射: 数据库原理与应用 → 韩瑶妹
+[2025-06-25 18:18:50,058] INFO in data_extractor: 建立教师映射: 数据库原理与应用 → 韩瑶妹
+[2025-06-25 18:18:50,059] INFO in data_extractor: 建立了 6 个教师映射关系
+[2025-06-25 18:18:50,059] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 大学生职业发展与就业指导1(42202001)
+[2025-06-25 18:18:50,059] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 数据结构(04212002)
+[2025-06-25 18:18:50,059] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: Java面向对象编程技术(04212001)
+[2025-06-25 18:18:50,059] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 数据结构课程设计(04232001)
+[2025-06-25 18:18:50,059] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 形势与政策1(11202001)
+[2025-06-25 18:18:50,059] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 网页设计(04462001)
+[2025-06-25 18:18:50,059] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 当代大学生国家安全教育(19151902)
+[2025-06-25 18:18:50,059] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 中药学(19102013)
+[2025-06-25 18:18:50,060] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 计算机通信网络技术(04222003)
+[2025-06-25 18:18:50,060] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 世界建筑史(19122207)
+[2025-06-25 18:18:50,060] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 计算机组成原理(04212401)
+[2025-06-25 18:18:50,060] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 《汉书》导读(19102012)
+[2025-06-25 18:18:50,061] INFO in data_extractor: ✅ 课程表直接匹配找到真实教师: Java Web程序设计[E] → 郑一然
+[2025-06-25 18:18:50,061] INFO in data_extractor: ✅ 成功补充真实教师信息: Java Web程序设计[E](04462002) → 郑一然
+[2025-06-25 18:18:50,061] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 中国陶瓷鉴赏与器物陈设(19122202)
+[2025-06-25 18:18:50,061] INFO in data_extractor: 真实教师信息补全统计:
+[2025-06-25 18:18:50,061] INFO in data_extractor:   总课程数: 14
+[2025-06-25 18:18:50,061] INFO in data_extractor:   找到真实教师: 1 (7.1%)
+[2025-06-25 18:18:50,061] INFO in data_extractor:   未找到教师: 13 (92.9%)
+[2025-06-25 18:18:50,061] INFO in data_extractor: 正在优化课程名称显示...
+[2025-06-25 18:18:50,061] INFO in data_extractor: 开始过滤 grade 数据，原始数据量: 14
+[2025-06-25 18:18:50,061] INFO in data_extractor: [课程名称检查] 原始课程名: '大学生职业发展与就业指导1', 数据类型: grade
+[2025-06-25 18:18:50,062] INFO in data_extractor: ✅ grade保留真实中文名: '大学生职业发展与就业指导1'
+[2025-06-25 18:18:50,062] INFO in data_extractor: [课程名称检查] 原始课程名: '数据结构', 数据类型: grade
+[2025-06-25 18:18:50,062] INFO in data_extractor: ✅ grade保留真实中文名: '数据结构'
+[2025-06-25 18:18:50,062] INFO in data_extractor: [课程名称检查] 原始课程名: 'Java面向对象编程技术', 数据类型: grade
+[2025-06-25 18:18:50,062] INFO in data_extractor: ✅ grade保留真实中文名: 'Java面向对象编程技术'
+[2025-06-25 18:18:50,062] INFO in data_extractor: [课程名称检查] 原始课程名: '数据结构课程设计', 数据类型: grade
+[2025-06-25 18:18:50,062] INFO in data_extractor: ✅ grade保留真实中文名: '数据结构课程设计'
+[2025-06-25 18:18:50,062] INFO in data_extractor: [课程名称检查] 原始课程名: '形势与政策1', 数据类型: grade
+[2025-06-25 18:18:50,062] INFO in data_extractor: ✅ grade保留真实中文名: '形势与政策1'
+[2025-06-25 18:18:50,062] INFO in data_extractor: [课程名称检查] 原始课程名: '网页设计', 数据类型: grade
+[2025-06-25 18:18:50,062] INFO in data_extractor: ✅ grade保留真实中文名: '网页设计'
+[2025-06-25 18:18:50,063] INFO in data_extractor: [课程名称检查] 原始课程名: '当代大学生国家安全教育', 数据类型: grade
+[2025-06-25 18:18:50,063] INFO in data_extractor: ✅ grade保留真实中文名: '当代大学生国家安全教育'
+[2025-06-25 18:18:50,063] INFO in data_extractor: [课程名称检查] 原始课程名: '中药学', 数据类型: grade
+[2025-06-25 18:18:50,063] INFO in data_extractor: ✅ grade保留真实中文名: '中药学'
+[2025-06-25 18:18:50,063] INFO in data_extractor: [课程名称检查] 原始课程名: '计算机通信网络技术', 数据类型: grade
+[2025-06-25 18:18:50,063] INFO in data_extractor: ✅ grade保留真实中文名: '计算机通信网络技术'
+[2025-06-25 18:18:50,063] INFO in data_extractor: [课程名称检查] 原始课程名: '世界建筑史', 数据类型: grade
+[2025-06-25 18:18:50,063] INFO in data_extractor: ✅ grade保留真实中文名: '世界建筑史'
+[2025-06-25 18:18:50,063] INFO in data_extractor: [课程名称检查] 原始课程名: '计算机组成原理', 数据类型: grade
+[2025-06-25 18:18:50,063] INFO in data_extractor: ✅ grade保留真实中文名: '计算机组成原理'
+[2025-06-25 18:18:50,063] INFO in data_extractor: [课程名称检查] 原始课程名: '《汉书》导读', 数据类型: grade
+[2025-06-25 18:18:50,063] INFO in data_extractor: ✅ grade保留真实中文名: '《汉书》导读'
+[2025-06-25 18:18:50,063] INFO in data_extractor: [课程名称检查] 原始课程名: 'Java Web程序设计[E]', 数据类型: grade
+[2025-06-25 18:18:50,064] INFO in data_extractor: ✅ grade保留真实中文名: 'Java Web程序设计[E]'
+[2025-06-25 18:18:50,064] INFO in data_extractor: [课程名称检查] 原始课程名: '中国陶瓷鉴赏与器物陈设', 数据类型: grade
+[2025-06-25 18:18:50,064] INFO in data_extractor: ✅ grade保留真实中文名: '中国陶瓷鉴赏与器物陈设'
+[2025-06-25 18:18:50,064] INFO in data_extractor: 📊 grade数据过滤结果: 原始14条 → 保留14条
+[2025-06-25 18:18:50,064] INFO in data_extractor: 构建了 14 个课程代码到中文名的映射
+[2025-06-25 18:18:50,064] INFO in data_extractor: 开始过滤 course 数据，原始数据量: 11
+[2025-06-25 18:18:50,064] INFO in data_extractor: [课程名称检查] 原始课程名: '形势与政策2', 数据类型: course
+[2025-06-25 18:18:50,064] INFO in data_extractor: ✅ course保留真实中文名: '形势与政策2'
+[2025-06-25 18:18:50,064] INFO in data_extractor: [课程名称检查] 原始课程名: 'Java Web程序设计[E]', 数据类型: course
+[2025-06-25 18:18:50,064] INFO in data_extractor: ✅ course保留真实中文名: 'Java Web程序设计[E]'
+[2025-06-25 18:18:50,064] INFO in data_extractor: [课程名称检查] 原始课程名: 'Java Web程序设计[E]', 数据类型: course
+[2025-06-25 18:18:50,064] INFO in data_extractor: ✅ course保留真实中文名: 'Java Web程序设计[E]'
+[2025-06-25 18:18:50,065] INFO in data_extractor: [课程名称检查] 原始课程名: 'Java Web程序设计[E]', 数据类型: course
+[2025-06-25 18:18:50,065] INFO in data_extractor: ✅ course保留真实中文名: 'Java Web程序设计[E]'
+[2025-06-25 18:18:50,065] INFO in data_extractor: [课程名称检查] 原始课程名: 'Python程序设计', 数据类型: course
+[2025-06-25 18:18:50,065] INFO in data_extractor: ✅ course保留真实中文名: 'Python程序设计'
+[2025-06-25 18:18:50,065] INFO in data_extractor: [课程名称检查] 原始课程名: 'Python程序设计', 数据类型: course
+[2025-06-25 18:18:50,065] INFO in data_extractor: ✅ course保留真实中文名: 'Python程序设计'
+[2025-06-25 18:18:50,065] INFO in data_extractor: [课程名称检查] 原始课程名: '大学生职业发展与就业指导2', 数据类型: course
+[2025-06-25 18:18:50,065] INFO in data_extractor: ✅ course保留真实中文名: '大学生职业发展与就业指导2'
+[2025-06-25 18:18:50,065] INFO in data_extractor: [课程名称检查] 原始课程名: '操作系统', 数据类型: course
+[2025-06-25 18:18:50,065] INFO in data_extractor: ✅ course保留真实中文名: '操作系统'
+[2025-06-25 18:18:50,066] INFO in data_extractor: [课程名称检查] 原始课程名: '操作系统', 数据类型: course
+[2025-06-25 18:18:50,066] INFO in data_extractor: ✅ course保留真实中文名: '操作系统'
+[2025-06-25 18:18:50,066] INFO in data_extractor: [课程名称检查] 原始课程名: '数据库原理与应用', 数据类型: course
+[2025-06-25 18:18:50,066] INFO in data_extractor: ✅ course保留真实中文名: '数据库原理与应用'
+[2025-06-25 18:18:50,066] INFO in data_extractor: [课程名称检查] 原始课程名: '数据库原理与应用', 数据类型: course
+[2025-06-25 18:18:50,067] INFO in data_extractor: ✅ course保留真实中文名: '数据库原理与应用'
+[2025-06-25 18:18:50,067] INFO in data_extractor: 📊 course数据过滤结果: 原始11条 → 保留11条
+[2025-06-25 18:18:50,067] INFO in data_extractor: 开始过滤 exam 数据，原始数据量: 4
+[2025-06-25 18:18:50,067] INFO in data_extractor: [课程名称检查] 原始课程名: '数据库原理与应用', 数据类型: exam
+[2025-06-25 18:18:50,067] INFO in data_extractor: ✅ exam保留考试数据的真实中文名: '数据库原理与应用'
+[2025-06-25 18:18:50,067] INFO in data_extractor: [课程名称检查] 原始课程名: 'Python程序设计', 数据类型: exam
+[2025-06-25 18:18:50,067] INFO in data_extractor: ✅ exam保留考试数据的真实中文名: 'Python程序设计'
+[2025-06-25 18:18:50,068] INFO in data_extractor: [课程名称检查] 原始课程名: '操作系统', 数据类型: exam
+[2025-06-25 18:18:50,068] INFO in data_extractor: ✅ exam保留考试数据的真实中文名: '操作系统'
+[2025-06-25 18:18:50,068] INFO in data_extractor: [课程名称检查] 原始课程名: '《汉书》导读', 数据类型: exam
+[2025-06-25 18:18:50,068] INFO in data_extractor: ✅ exam保留考试数据的真实中文名: '《汉书》导读'
+[2025-06-25 18:18:50,068] INFO in data_extractor: 📊 exam数据过滤结果: 原始4条 → 保留4条
+[2025-06-25 18:18:50,068] INFO in data_extractor: 清理后数据统计: 课程11条, 考试4条, 成绩14条
+[2025-06-25 18:18:51,047] INFO in data_extractor: 数据保存成功
+[2025-06-25 18:18:51,048] INFO in data_extractor: 数据保存成功 - 更新了用户 周宇清 的数据
+[2025-06-25 18:18:51,048] INFO in data_extractor: 步骤7: 创建用户会话
+[2025-06-25 18:18:51,519] INFO in data_extractor: 用户会话创建成功: dfbd567c-a384-4145-8286-c9a43010a224
+[2025-06-25 18:18:51,519] INFO in data_extractor: 用户会话创建成功: dfbd567c-a384-4145-8286-c9a43010a224
+[2025-06-25 18:18:51,520] INFO in data_extractor: 用户 242040390 数据处理成功，耗时 5.18 秒
+[2025-06-25 18:18:51,520] INFO in api_server: 用户 242040390 数据处理成功，耗时 5.18 秒
+[2025-06-25 18:18:51,522] INFO in _internal: 127.0.0.1 - - [25/Jun/2025 18:18:51] "POST /extract HTTP/1.1" 200 -
+[2025-06-25 21:36:56,849] INFO in api_server: 【日志测试】收到/extract请求
+[2025-06-25 21:36:56,859] INFO in api_server: 【日志测试】收到/extract请求
+[2025-06-25 21:36:56,861] INFO in api_server: 收到数据提取请求 - 时间: 2025-06-25 21:36:56.861510
+[2025-06-25 21:36:56,862] INFO in api_server: 收到数据提取请求 - 时间: 2025-06-25 21:36:56.862453
+[2025-06-25 21:36:56,870] INFO in api_server: 请求数据: {'student_id': '242040390', 'password': 'Zzhouyu007'}
+[2025-06-25 21:36:56,871] INFO in api_server: 请求数据: {'student_id': '242040390', 'password': 'Zzhouyu007'}
+[2025-06-25 21:36:56,871] INFO in api_server: 开始处理用户: 242040390
+[2025-06-25 21:36:56,871] INFO in api_server: 开始处理用户: 242040390
+[2025-06-25 21:36:56,873] INFO in api_server: 数据提取器实例创建成功
+[2025-06-25 21:36:56,873] INFO in api_server: 数据提取器实例创建成功
+[2025-06-25 21:36:56,874] INFO in data_extractor: 开始处理用户: 242040390
+[2025-06-25 21:36:56,874] INFO in data_extractor: 开始处理用户: 242040390
+[2025-06-25 21:36:56,875] INFO in data_extractor: 开始为用户 242040390 提取和保存数据
+[2025-06-25 21:36:56,876] INFO in data_extractor: 开始为用户 242040390 提取和保存数据
+[2025-06-25 21:36:56,876] INFO in data_extractor: 步骤0: 检查用户是否已存在于数据库中
+[2025-06-25 21:36:56,876] INFO in data_extractor: 步骤0: 检查用户是否已存在于数据库中
+[2025-06-25 21:36:57,943] INFO in data_extractor: 用户 242040390 已存在: 周宇清 - 将更新数据
+[2025-06-25 21:36:57,943] INFO in data_extractor: 步骤1: 登录系统
+[2025-06-25 21:36:57,943] INFO in data_extractor: 开始登录用户: 242040390
+[2025-06-25 21:36:57,949] INFO in data_extractor: 正在获取登录页面...
+[2025-06-25 21:36:57,949] INFO in data_extractor: 用户 242040390 已存在: 周宇清 - 将更新数据
+[2025-06-25 21:36:57,956] INFO in data_extractor: 步骤1: 登录系统
+[2025-06-25 21:36:57,964] INFO in data_extractor: 开始登录用户: 242040390
+[2025-06-25 21:36:57,964] INFO in data_extractor: 正在获取登录页面...
+[2025-06-25 21:36:58,259] INFO in data_extractor: 登录页面响应状态: 200
+[2025-06-25 21:36:58,259] INFO in data_extractor: 登录页面响应状态: 200
+[2025-06-25 21:36:58,259] INFO in data_extractor: 密码加密前缀: 4c8ffafc-405c-48b2-918d-ee9a897720b1-
+[2025-06-25 21:36:58,260] INFO in data_extractor: 密码加密前缀: 720ec04d-239f-4bd0-a128-643de1cd9547-
+[2025-06-25 21:36:58,260] INFO in data_extractor: 准备发送登录请求，等待1秒...
+[2025-06-25 21:36:58,260] INFO in data_extractor: 准备发送登录请求，等待1秒...
+[2025-06-25 21:36:59,445] INFO in data_extractor: 登录响应状态码: 200
+[2025-06-25 21:36:59,446] INFO in data_extractor: 登录响应URL: https://jwxt.masu.edu.cn:443/eams/home.action
+[2025-06-25 21:36:59,446] INFO in data_extractor: 登录成功 - 检测到系统主页面
+[2025-06-25 21:36:59,446] INFO in data_extractor: 登录成功: 登录成功
+[2025-06-25 21:36:59,446] INFO in data_extractor: 步骤2: 获取学生信息
+[2025-06-25 21:36:59,446] INFO in data_extractor: 开始获取学生信息...
+[2025-06-25 21:36:59,446] INFO in data_extractor: 尝试从 https://jwxt.masu.edu.cn/eams/stdDetail.action 获取详细学生信息...
+[2025-06-25 21:36:59,448] INFO in data_extractor: 登录响应状态码: 200
+[2025-06-25 21:36:59,448] INFO in data_extractor: 登录响应URL: https://jwxt.masu.edu.cn:443/eams/home.action
+[2025-06-25 21:36:59,448] INFO in data_extractor: 登录成功 - 检测到系统主页面
+[2025-06-25 21:36:59,448] INFO in data_extractor: 登录成功: 登录成功
+[2025-06-25 21:36:59,448] INFO in data_extractor: 步骤2: 获取学生信息
+[2025-06-25 21:36:59,448] INFO in data_extractor: 开始获取学生信息...
+[2025-06-25 21:36:59,449] INFO in data_extractor: 尝试从 https://jwxt.masu.edu.cn/eams/stdDetail.action 获取详细学生信息...
+[2025-06-25 21:36:59,551] INFO in data_extractor: ✅ 学号: 242040390
+[2025-06-25 21:36:59,560] INFO in data_extractor: ✅ 学号: 242040390
+[2025-06-25 21:36:59,561] INFO in data_extractor: ✅ 姓名: 周宇清
+[2025-06-25 21:36:59,561] INFO in data_extractor: ✅ 姓名: 周宇清
+[2025-06-25 21:36:59,561] INFO in data_extractor: ✅ 性别: 男
+[2025-06-25 21:36:59,562] INFO in data_extractor: ✅ 性别: 男
+[2025-06-25 21:36:59,562] INFO in data_extractor: ✅ 年级: 2024
+[2025-06-25 21:36:59,562] INFO in data_extractor: ✅ 年级: 2024
+[2025-06-25 21:36:59,562] INFO in data_extractor: ✅ 学制: 2
+[2025-06-25 21:36:59,563] INFO in data_extractor: ✅ 学制: 2
+[2025-06-25 21:36:59,563] INFO in data_extractor: ✅ 项目: 本科
+[2025-06-25 21:36:59,563] INFO in data_extractor: ✅ 项目: 本科
+[2025-06-25 21:36:59,564] INFO in data_extractor: ✅ 学历层次: 专科起点本科
+[2025-06-25 21:36:59,564] INFO in data_extractor: ✅ 学历层次: 专科起点本科
+[2025-06-25 21:36:59,564] INFO in data_extractor: ✅ 学生类别: 普通本科生
+[2025-06-25 21:36:59,564] INFO in data_extractor: ✅ 学生类别: 普通本科生
+[2025-06-25 21:36:59,564] INFO in data_extractor: ✅ 院系: 大数据与人工智能学院
+[2025-06-25 21:36:59,565] INFO in data_extractor: ✅ 院系: 大数据与人工智能学院
+[2025-06-25 21:36:59,565] INFO in data_extractor: ✅ 专业: 软件工程（专升本）
+[2025-06-25 21:36:59,565] INFO in data_extractor: ✅ 专业: 软件工程（专升本）
+[2025-06-25 21:36:59,565] INFO in data_extractor: ✅ 入校时间: 2024-09-07
+[2025-06-25 21:36:59,565] INFO in data_extractor: ✅ 入校时间: 2024-09-07
+[2025-06-25 21:36:59,565] INFO in data_extractor: ✅ 毕业时间: 2026-07-01
+[2025-06-25 21:36:59,565] INFO in data_extractor: ✅ 毕业时间: 2026-07-01
+[2025-06-25 21:36:59,565] INFO in data_extractor: ✅ 行政管理院系: 大数据与人工智能学院
+[2025-06-25 21:36:59,565] INFO in data_extractor: ✅ 行政管理院系: 大数据与人工智能学院
+[2025-06-25 21:36:59,566] INFO in data_extractor: ✅ 是否在籍: 是
+[2025-06-25 21:36:59,566] INFO in data_extractor: ✅ 是否在籍: 是
+[2025-06-25 21:36:59,566] INFO in data_extractor: ✅ 是否在校: 是
+[2025-06-25 21:36:59,566] INFO in data_extractor: ✅ 是否在校: 是
+[2025-06-25 21:36:59,566] INFO in data_extractor: ✅ 所属班级: 软升243
+[2025-06-25 21:36:59,566] INFO in data_extractor: ✅ 所属班级: 软升243
+[2025-06-25 21:36:59,566] INFO in data_extractor: ✅ 是否有学籍: 是
+[2025-06-25 21:36:59,566] INFO in data_extractor: ✅ 是否有学籍: 是
+[2025-06-25 21:36:59,566] INFO in data_extractor: ✅ 学籍状态: 在校
+[2025-06-25 21:36:59,566] INFO in data_extractor: ✅ 学籍状态: 在校
+[2025-06-25 21:36:59,567] INFO in data_extractor: ✅ 民族: 汉族
+[2025-06-25 21:36:59,567] INFO in data_extractor: ✅ 民族: 汉族
+[2025-06-25 21:36:59,567] INFO in data_extractor: ✅ 健康状况: 健康
+[2025-06-25 21:36:59,567] INFO in data_extractor: ✅ 健康状况: 健康
+[2025-06-25 21:36:59,567] INFO in data_extractor: ✅ 政治面貌: 共青团员
+[2025-06-25 21:36:59,567] INFO in data_extractor: ✅ 政治面貌: 共青团员
+[2025-06-25 21:36:59,567] INFO in data_extractor: 从表格中找到 21 个字段
+[2025-06-25 21:36:59,568] INFO in data_extractor: 从表格中找到 21 个字段
+[2025-06-25 21:36:59,568] INFO in data_extractor: 最终获取的学生信息: {'student_id': '242040390', 'student_name': '周宇清', 'major': '软件工程（专升本）', 'department': '大数据与人工智能学院', 'grade': '2024', 'class_name': '软升243', 'student_type': '普通本科生', 'enrollment_date': '2024-09-07', 'graduation_date': '2026-07-01', 'study_duration': '2', 'gender': '男', 'political_status': '共青团员', 'ethnic_group': '汉族', 'health_status': '健康', 'campus': '', 'student_status': '在校', 'is_enrolled': '是', 'is_on_campus': '是', 'project_type': '本科', 'education_level': '专科起点本科'}
+[2025-06-25 21:36:59,569] INFO in data_extractor: 最终获取的学生信息: {'student_id': '242040390', 'student_name': '周宇清', 'major': '软件工程（专升本）', 'department': '大数据与人工智能学院', 'grade': '2024', 'class_name': '软升243', 'student_type': '普通本科生', 'enrollment_date': '2024-09-07', 'graduation_date': '2026-07-01', 'study_duration': '2', 'gender': '男', 'political_status': '共青团员', 'ethnic_group': '汉族', 'health_status': '健康', 'campus': '', 'student_status': '在校', 'is_enrolled': '是', 'is_on_campus': '是', 'project_type': '本科', 'education_level': '专科起点本科'}
+[2025-06-25 21:36:59,569] INFO in data_extractor: 过滤后student_info: {'student_id': '242040390', 'student_name': '周宇清', 'major': '软件工程（专升本）', 'department': '大数据与人工智能学院', 'grade': '2024', 'class_name': '软升243', 'student_type': '普通本科生', 'enrollment_date': '2024-09-07', 'graduation_date': '2026-07-01', 'study_duration': '2', 'gender': '男', 'political_status': '共青团员', 'ethnic_group': '汉族', 'health_status': '健康', 'campus': '', 'student_status': '在校', 'is_enrolled': '是', 'is_on_campus': '是', 'project_type': '本科', 'education_level': '专科起点本科'}
+[2025-06-25 21:36:59,570] INFO in data_extractor: 过滤后student_info: {'student_id': '242040390', 'student_name': '周宇清', 'major': '软件工程（专升本）', 'department': '大数据与人工智能学院', 'grade': '2024', 'class_name': '软升243', 'student_type': '普通本科生', 'enrollment_date': '2024-09-07', 'graduation_date': '2026-07-01', 'study_duration': '2', 'gender': '男', 'political_status': '共青团员', 'ethnic_group': '汉族', 'health_status': '健康', 'campus': '', 'student_status': '在校', 'is_enrolled': '是', 'is_on_campus': '是', 'project_type': '本科', 'education_level': '专科起点本科'}
+[2025-06-25 21:36:59,570] INFO in data_extractor: 成功获取学生信息: 周宇清 (242040390)
+[2025-06-25 21:36:59,570] INFO in data_extractor: 成功获取学生信息: 周宇清 (242040390)
+[2025-06-25 21:36:59,570] INFO in data_extractor: 步骤3: 获取课程表数据
+[2025-06-25 21:36:59,570] INFO in data_extractor: 步骤3: 获取课程表数据
+[2025-06-25 21:36:59,571] INFO in data_extractor: 开始获取课程表数据...
+[2025-06-25 21:36:59,571] INFO in data_extractor: 开始获取课程表数据...
+[2025-06-25 21:36:59,571] INFO in data_extractor: 尝试获取课表框架页面: https://jwxt.masu.edu.cn/eams/courseTableForStd.action
+[2025-06-25 21:36:59,571] INFO in data_extractor: 尝试获取课表框架页面: https://jwxt.masu.edu.cn/eams/courseTableForStd.action
+[2025-06-25 21:36:59,629] INFO in data_extractor: 尝试获取 project.id 从: https://jwxt.masu.edu.cn/eams/dataQuery.action
+[2025-06-25 21:36:59,632] INFO in data_extractor: 尝试获取 project.id 从: https://jwxt.masu.edu.cn/eams/dataQuery.action
+[2025-06-25 21:36:59,673] INFO in data_extractor: 获取到的 project.id: 1
+[2025-06-25 21:36:59,673] INFO in data_extractor: 自动提取到课表ids: 41657
+[2025-06-25 21:36:59,673] INFO in data_extractor: 尝试获取实际课表数据从: https://jwxt.masu.edu.cn/eams/courseTableForStd!courseTable.action
+[2025-06-25 21:36:59,674] INFO in data_extractor: 获取到的 project.id: 1
+[2025-06-25 21:36:59,676] INFO in data_extractor: 自动提取到课表ids: 41657
+[2025-06-25 21:36:59,677] INFO in data_extractor: 尝试获取实际课表数据从: https://jwxt.masu.edu.cn/eams/courseTableForStd!courseTable.action
+[2025-06-25 21:37:00,098] INFO in data_extractor: 解析到 11 门课程
+[2025-06-25 21:37:00,098] INFO in data_extractor: 获取到 11 条课程记录
+[2025-06-25 21:37:00,098] INFO in data_extractor: 步骤4: 获取考试数据
+[2025-06-25 21:37:00,098] INFO in data_extractor: 开始获取考试数据...
+[2025-06-25 21:37:00,099] INFO in data_extractor: 尝试从 https://jwxt.masu.edu.cn/eams/stdExamTable.action 获取考试批次...
+[2025-06-25 21:37:00,109] INFO in data_extractor: 解析到 11 门课程
+[2025-06-25 21:37:00,110] INFO in data_extractor: 获取到 11 条课程记录
+[2025-06-25 21:37:00,110] INFO in data_extractor: 步骤4: 获取考试数据
+[2025-06-25 21:37:00,110] INFO in data_extractor: 开始获取考试数据...
+[2025-06-25 21:37:00,111] INFO in data_extractor: 尝试从 https://jwxt.masu.edu.cn/eams/stdExamTable.action 获取考试批次...
+[2025-06-25 21:37:00,167] INFO in data_extractor: 找到考试批次ID: 661 - 2024-2025-2期末考试
+[2025-06-25 21:37:00,167] INFO in data_extractor: 尝试获取批次 661 的考试安排...
+[2025-06-25 21:37:00,171] INFO in data_extractor: 找到考试批次ID: 661 - 2024-2025-2期末考试
+[2025-06-25 21:37:00,172] INFO in data_extractor: 尝试获取批次 661 的考试安排...
+[2025-06-25 21:37:00,282] INFO in data_extractor: 批次 661 表格标题: ['课程序号', '课程名称', '考试类别', '考试日期', '考试安排', '考试地点', '考场座位号', '考试情况', '其它说明']
+[2025-06-25 21:37:00,282] INFO in data_extractor: 批次 661 表格标题: ['课程序号', '课程名称', '考试类别', '考试日期', '考试安排', '考试地点', '考场座位号', '考试情况', '其它说明']
+[2025-06-25 21:37:00,282] INFO in data_extractor: 批次 661 字段映射: {'course_name': 1, 'exam_type': 2, 'exam_date': 3, 'exam_time': 4, 'classroom': 5, 'seat_number': 6}
+[2025-06-25 21:37:00,283] INFO in data_extractor: 批次 661 字段映射: {'course_name': 1, 'exam_type': 2, 'exam_date': 3, 'exam_time': 4, 'classroom': 5, 'seat_number': 6}
+[2025-06-25 21:37:00,283] INFO in data_extractor: [考试原始数据] 课程名: '数据库原理与应用', 类型: '期末考试', 日期: '2025-06-23'
+[2025-06-25 21:37:00,283] INFO in data_extractor: [考试原始数据] 课程名: '数据库原理与应用', 类型: '期末考试', 日期: '2025-06-23'
+[2025-06-25 21:37:00,284] INFO in data_extractor: 找到考试: 数据库原理与应用 - 2025-06-23 - E311
+[2025-06-25 21:37:00,284] INFO in data_extractor: 找到考试: 数据库原理与应用 - 2025-06-23 - E311
+[2025-06-25 21:37:00,284] INFO in data_extractor: [考试原始数据] 课程名: 'Python程序设计', 类型: '期末考试', 日期: '2025-06-11'
+[2025-06-25 21:37:00,284] INFO in data_extractor: [考试原始数据] 课程名: 'Python程序设计', 类型: '期末考试', 日期: '2025-06-11'
+[2025-06-25 21:37:00,284] INFO in data_extractor: 找到考试: Python程序设计 - 2025-06-11 - 3号实验楼106
+[2025-06-25 21:37:00,284] INFO in data_extractor: 找到考试: Python程序设计 - 2025-06-11 - 3号实验楼106
+[2025-06-25 21:37:00,285] INFO in data_extractor: [考试原始数据] 课程名: '操作系统', 类型: '期末考试', 日期: '2025-06-25'
+[2025-06-25 21:37:00,285] INFO in data_extractor: [考试原始数据] 课程名: '操作系统', 类型: '期末考试', 日期: '2025-06-25'
+[2025-06-25 21:37:00,285] INFO in data_extractor: 找到考试: 操作系统 - 2025-06-25 - E209
+[2025-06-25 21:37:00,285] INFO in data_extractor: 找到考试: 操作系统 - 2025-06-25 - E209
+[2025-06-25 21:37:00,285] INFO in data_extractor: [考试原始数据] 课程名: '《汉书》导读', 类型: '期末考试', 日期: '时间未安排'
+[2025-06-25 21:37:00,285] INFO in data_extractor: [考试原始数据] 课程名: '《汉书》导读', 类型: '期末考试', 日期: '时间未安排'
+[2025-06-25 21:37:00,285] INFO in data_extractor: 找到考试: 《汉书》导读 - 时间未安排 - 地点未安排
+[2025-06-25 21:37:00,285] INFO in data_extractor: 找到考试: 《汉书》导读 - 时间未安排 - 地点未安排
+[2025-06-25 21:37:00,286] INFO in data_extractor: 批次 661 共找到 4 条考试记录
+[2025-06-25 21:37:00,286] INFO in data_extractor: 批次 661 共找到 4 条考试记录
+[2025-06-25 21:37:00,286] INFO in data_extractor: 总共解析到 4 条考试安排
+[2025-06-25 21:37:00,286] INFO in data_extractor: 总共解析到 4 条考试安排
+[2025-06-25 21:37:00,287] INFO in data_extractor: 去重后保留 4 条考试安排
+[2025-06-25 21:37:00,287] INFO in data_extractor: 去重后保留 4 条考试安排
+[2025-06-25 21:37:00,287] INFO in data_extractor: 获取到 4 条考试记录
+[2025-06-25 21:37:00,287] INFO in data_extractor: 获取到 4 条考试记录
+[2025-06-25 21:37:00,287] INFO in data_extractor: 步骤5: 获取成绩数据
+[2025-06-25 21:37:00,287] INFO in data_extractor: 步骤5: 获取成绩数据
+[2025-06-25 21:37:00,288] INFO in data_extractor: 开始获取成绩数据...
+[2025-06-25 21:37:00,288] INFO in data_extractor: 开始获取成绩数据...
+[2025-06-25 21:37:00,288] INFO in data_extractor: 尝试从 https://jwxt.masu.edu.cn/eams/teach/grade/course/person!historyCourseGrade.action?projectType=MAJOR 获取成绩数据...
+[2025-06-25 21:37:00,288] INFO in data_extractor: 尝试从 https://jwxt.masu.edu.cn/eams/teach/grade/course/person!historyCourseGrade.action?projectType=MAJOR 获取成绩数据...
+[2025-06-25 21:37:00,367] INFO in data_extractor: 成绩表格标题: ['学年度', '学期', '门数', '总学分', '平均绩点']
+[2025-06-25 21:37:00,368] INFO in data_extractor: 成绩字段映射: {'credits': 3, 'grade_point': 4, 'semester': 1}
+[2025-06-25 21:37:00,376] INFO in data_extractor: 成绩表格标题: ['学年度', '学期', '门数', '总学分', '平均绩点']
+[2025-06-25 21:37:00,376] WARNING in data_extractor: 跳过空课程名的成绩记录: {'course_name': '', 'course_code': '', 'credits': 5.0, 'grade': '', 'grade_point': 3.76, 'semester': '2', 'exam_type': '', 'course_type': '专业课', 'teacher': ''}
+[2025-06-25 21:37:00,376] INFO in data_extractor: 成绩字段映射: {'credits': 3, 'grade_point': 4, 'semester': 1}
+[2025-06-25 21:37:00,376] WARNING in data_extractor: 跳过空课程名的成绩记录: {'course_name': '', 'course_code': '', 'credits': 20.0, 'grade': '', 'grade_point': 3.19, 'semester': '1', 'exam_type': '', 'course_type': '专业课', 'teacher': ''}
+[2025-06-25 21:37:00,377] WARNING in data_extractor: 跳过空课程名的成绩记录: {'course_name': '', 'course_code': '', 'credits': 5.0, 'grade': '', 'grade_point': 3.76, 'semester': '2', 'exam_type': '', 'course_type': '专业课', 'teacher': ''}
+[2025-06-25 21:37:00,377] WARNING in data_extractor: 跳过空课程名的成绩记录: {'course_name': '', 'course_code': '', 'credits': 3.3, 'grade': '', 'grade_point': None, 'semester': '14', 'exam_type': '', 'course_type': '专业课', 'teacher': ''}
+[2025-06-25 21:37:00,377] WARNING in data_extractor: 跳过空课程名的成绩记录: {'course_name': '', 'course_code': '', 'credits': 20.0, 'grade': '', 'grade_point': 3.19, 'semester': '1', 'exam_type': '', 'course_type': '专业课', 'teacher': ''}
+[2025-06-25 21:37:00,378] INFO in data_extractor: 成绩表格标题: ['学年学期', '课程代码', '课程序号', '课程名称', '课程类别', '学分', '总评成绩', '最终', '绩点']
+[2025-06-25 21:37:00,378] WARNING in data_extractor: 跳过空课程名的成绩记录: {'course_name': '', 'course_code': '', 'credits': 3.3, 'grade': '', 'grade_point': None, 'semester': '14', 'exam_type': '', 'course_type': '专业课', 'teacher': ''}
+[2025-06-25 21:37:00,379] INFO in data_extractor: 成绩字段映射: {'course_name': 3, 'course_code': 1, 'credits': 5, 'grade': 6, 'grade_point': 8, 'semester': 0}
+[2025-06-25 21:37:00,379] INFO in data_extractor: 成绩表格标题: ['学年学期', '课程代码', '课程序号', '课程名称', '课程类别', '学分', '总评成绩', '最终', '绩点']
+[2025-06-25 21:37:00,379] INFO in data_extractor: [成绩原始数据] 课程名: '大学生职业发展与就业指导1', 课程代码: '42202001', 成绩: '良好'
+[2025-06-25 21:37:00,379] INFO in data_extractor: 成绩字段映射: {'course_name': 3, 'course_code': 1, 'credits': 5, 'grade': 6, 'grade_point': 8, 'semester': 0}
+[2025-06-25 21:37:00,380] INFO in data_extractor: 找到成绩: 大学生职业发展与就业指导1 - 良好 - 2024-2025 1
+[2025-06-25 21:37:00,380] INFO in data_extractor: [成绩原始数据] 课程名: '大学生职业发展与就业指导1', 课程代码: '42202001', 成绩: '良好'
+[2025-06-25 21:37:00,380] INFO in data_extractor: [成绩原始数据] 课程名: '数据结构', 课程代码: '04212002', 成绩: '75'
+[2025-06-25 21:37:00,380] INFO in data_extractor: 找到成绩: 大学生职业发展与就业指导1 - 良好 - 2024-2025 1
+[2025-06-25 21:37:00,380] INFO in data_extractor: 找到成绩: 数据结构 - 75 - 2024-2025 1
+[2025-06-25 21:37:00,380] INFO in data_extractor: [成绩原始数据] 课程名: '数据结构', 课程代码: '04212002', 成绩: '75'
+[2025-06-25 21:37:00,380] INFO in data_extractor: [成绩原始数据] 课程名: 'Java面向对象编程技术', 课程代码: '04212001', 成绩: '99'
+[2025-06-25 21:37:00,380] INFO in data_extractor: 找到成绩: 数据结构 - 75 - 2024-2025 1
+[2025-06-25 21:37:00,380] INFO in data_extractor: 找到成绩: Java面向对象编程技术 - 99 - 2024-2025 1
+[2025-06-25 21:37:00,381] INFO in data_extractor: [成绩原始数据] 课程名: 'Java面向对象编程技术', 课程代码: '04212001', 成绩: '99'
+[2025-06-25 21:37:00,381] INFO in data_extractor: [成绩原始数据] 课程名: '数据结构课程设计', 课程代码: '04232001', 成绩: '良好'
+[2025-06-25 21:37:00,381] INFO in data_extractor: 找到成绩: Java面向对象编程技术 - 99 - 2024-2025 1
+[2025-06-25 21:37:00,381] INFO in data_extractor: 找到成绩: 数据结构课程设计 - 良好 - 2024-2025 1
+[2025-06-25 21:37:00,381] INFO in data_extractor: [成绩原始数据] 课程名: '数据结构课程设计', 课程代码: '04232001', 成绩: '良好'
+[2025-06-25 21:37:00,381] INFO in data_extractor: [成绩原始数据] 课程名: '形势与政策1', 课程代码: '11202001', 成绩: '优秀'
+[2025-06-25 21:37:00,381] INFO in data_extractor: 找到成绩: 数据结构课程设计 - 良好 - 2024-2025 1
+[2025-06-25 21:37:00,381] INFO in data_extractor: 找到成绩: 形势与政策1 - 优秀 - 2024-2025 1
+[2025-06-25 21:37:00,381] INFO in data_extractor: [成绩原始数据] 课程名: '形势与政策1', 课程代码: '11202001', 成绩: '优秀'
+[2025-06-25 21:37:00,381] INFO in data_extractor: [成绩原始数据] 课程名: '网页设计', 课程代码: '04462001', 成绩: '84'
+[2025-06-25 21:37:00,382] INFO in data_extractor: 找到成绩: 形势与政策1 - 优秀 - 2024-2025 1
+[2025-06-25 21:37:00,382] INFO in data_extractor: 找到成绩: 网页设计 - 84 - 2024-2025 1
+[2025-06-25 21:37:00,382] INFO in data_extractor: [成绩原始数据] 课程名: '网页设计', 课程代码: '04462001', 成绩: '84'
+[2025-06-25 21:37:00,382] INFO in data_extractor: [成绩原始数据] 课程名: '当代大学生国家安全教育', 课程代码: '19151902', 成绩: '93'
+[2025-06-25 21:37:00,382] INFO in data_extractor: 找到成绩: 网页设计 - 84 - 2024-2025 1
+[2025-06-25 21:37:00,382] INFO in data_extractor: 找到成绩: 当代大学生国家安全教育 - 93 - 2024-2025 1
+[2025-06-25 21:37:00,382] INFO in data_extractor: [成绩原始数据] 课程名: '当代大学生国家安全教育', 课程代码: '19151902', 成绩: '93'
+[2025-06-25 21:37:00,383] INFO in data_extractor: [成绩原始数据] 课程名: '中药学', 课程代码: '19102013', 成绩: '94'
+[2025-06-25 21:37:00,383] INFO in data_extractor: 找到成绩: 当代大学生国家安全教育 - 93 - 2024-2025 1
+[2025-06-25 21:37:00,383] INFO in data_extractor: 找到成绩: 中药学 - 94 - 2024-2025 1
+[2025-06-25 21:37:00,383] INFO in data_extractor: [成绩原始数据] 课程名: '中药学', 课程代码: '19102013', 成绩: '94'
+[2025-06-25 21:37:00,383] INFO in data_extractor: [成绩原始数据] 课程名: '计算机通信网络技术', 课程代码: '04222003', 成绩: '66'
+[2025-06-25 21:37:00,383] INFO in data_extractor: 找到成绩: 中药学 - 94 - 2024-2025 1
+[2025-06-25 21:37:00,384] INFO in data_extractor: 找到成绩: 计算机通信网络技术 - 66 - 2024-2025 1
+[2025-06-25 21:37:00,384] INFO in data_extractor: [成绩原始数据] 课程名: '计算机通信网络技术', 课程代码: '04222003', 成绩: '66'
+[2025-06-25 21:37:00,384] INFO in data_extractor: [成绩原始数据] 课程名: '世界建筑史', 课程代码: '19122207', 成绩: '99'
+[2025-06-25 21:37:00,384] INFO in data_extractor: 找到成绩: 计算机通信网络技术 - 66 - 2024-2025 1
+[2025-06-25 21:37:00,384] INFO in data_extractor: 找到成绩: 世界建筑史 - 99 - 2024-2025 1
+[2025-06-25 21:37:00,384] INFO in data_extractor: [成绩原始数据] 课程名: '世界建筑史', 课程代码: '19122207', 成绩: '99'
+[2025-06-25 21:37:00,384] INFO in data_extractor: [成绩原始数据] 课程名: '计算机组成原理', 课程代码: '04212401', 成绩: '83'
+[2025-06-25 21:37:00,384] INFO in data_extractor: 找到成绩: 世界建筑史 - 99 - 2024-2025 1
+[2025-06-25 21:37:00,384] INFO in data_extractor: 找到成绩: 计算机组成原理 - 83 - 2024-2025 1
+[2025-06-25 21:37:00,384] INFO in data_extractor: [成绩原始数据] 课程名: '计算机组成原理', 课程代码: '04212401', 成绩: '83'
+[2025-06-25 21:37:00,385] INFO in data_extractor: [成绩原始数据] 课程名: '《汉书》导读', 课程代码: '19102012', 成绩: '98'
+[2025-06-25 21:37:00,385] INFO in data_extractor: 找到成绩: 计算机组成原理 - 83 - 2024-2025 1
+[2025-06-25 21:37:00,385] INFO in data_extractor: 找到成绩: 《汉书》导读 - 98 - 2024-2025 2
+[2025-06-25 21:37:00,385] INFO in data_extractor: [成绩原始数据] 课程名: '《汉书》导读', 课程代码: '19102012', 成绩: '98'
+[2025-06-25 21:37:00,385] INFO in data_extractor: [成绩原始数据] 课程名: 'Java Web程序设计[E]', 课程代码: '04462002', 成绩: '86'
+[2025-06-25 21:37:00,385] INFO in data_extractor: 找到成绩: 《汉书》导读 - 98 - 2024-2025 2
+[2025-06-25 21:37:00,386] INFO in data_extractor: 找到成绩: Java Web程序设计[E] - 86 - 2024-2025 2
+[2025-06-25 21:37:00,386] INFO in data_extractor: [成绩原始数据] 课程名: 'Java Web程序设计[E]', 课程代码: '04462002', 成绩: '86'
+[2025-06-25 21:37:00,386] INFO in data_extractor: [成绩原始数据] 课程名: '中国陶瓷鉴赏与器物陈设', 课程代码: '19122202', 成绩: '93'
+[2025-06-25 21:37:00,386] INFO in data_extractor: 找到成绩: Java Web程序设计[E] - 86 - 2024-2025 2
+[2025-06-25 21:37:00,386] INFO in data_extractor: 找到成绩: 中国陶瓷鉴赏与器物陈设 - 93 - 2024-2025 2
+[2025-06-25 21:37:00,386] INFO in data_extractor: [成绩原始数据] 课程名: '中国陶瓷鉴赏与器物陈设', 课程代码: '19122202', 成绩: '93'
+[2025-06-25 21:37:00,386] INFO in data_extractor: 从 https://jwxt.masu.edu.cn/eams/teach/grade/course/person!historyCourseGrade.action?projectType=MAJOR 找到 14 条成绩记录
+[2025-06-25 21:37:00,387] INFO in data_extractor: 找到成绩: 中国陶瓷鉴赏与器物陈设 - 93 - 2024-2025 2
+[2025-06-25 21:37:00,387] INFO in data_extractor: 总共解析到 14 条成绩记录
+[2025-06-25 21:37:00,387] INFO in data_extractor: 从 https://jwxt.masu.edu.cn/eams/teach/grade/course/person!historyCourseGrade.action?projectType=MAJOR 找到 14 条成绩记录
+[2025-06-25 21:37:00,387] INFO in data_extractor: 去重后保留 14 条成绩记录
+[2025-06-25 21:37:00,387] INFO in data_extractor: 总共解析到 14 条成绩记录
+[2025-06-25 21:37:00,387] INFO in data_extractor: 获取到 14 条成绩记录
+[2025-06-25 21:37:00,387] INFO in data_extractor: 去重后保留 14 条成绩记录
+[2025-06-25 21:37:00,388] INFO in data_extractor: 步骤6: 保存数据到数据库
+[2025-06-25 21:37:00,388] INFO in data_extractor: 获取到 14 条成绩记录
+[2025-06-25 21:37:00,388] INFO in data_extractor: 原始student_info: {'student_id': '242040390', 'student_name': '周宇清', 'major': '软件工程（专升本）', 'department': '大数据与人工智能学院', 'grade': '2024', 'class_name': '软升243', 'student_type': '普通本科生', 'enrollment_date': '2024-09-07', 'graduation_date': '2026-07-01', 'study_duration': '2', 'gender': '男', 'political_status': '共青团员', 'ethnic_group': '汉族', 'health_status': '健康', 'campus': '', 'student_status': '在校', 'is_enrolled': '是', 'is_on_campus': '是', 'project_type': '本科', 'education_level': '专科起点本科'}
+[2025-06-25 21:37:00,388] INFO in data_extractor: 步骤6: 保存数据到数据库
+[2025-06-25 21:37:00,389] INFO in data_extractor: 原始student_info: {'student_id': '242040390', 'student_name': '周宇清', 'major': '软件工程（专升本）', 'department': '大数据与人工智能学院', 'grade': '2024', 'class_name': '软升243', 'student_type': '普通本科生', 'enrollment_date': '2024-09-07', 'graduation_date': '2026-07-01', 'study_duration': '2', 'gender': '男', 'political_status': '共青团员', 'ethnic_group': '汉族', 'health_status': '健康', 'campus': '', 'student_status': '在校', 'is_enrolled': '是', 'is_on_campus': '是', 'project_type': '本科', 'education_level': '专科起点本科'}
+[2025-06-25 21:37:00,841] INFO in data_extractor: 更新学生信息: 周宇清
+[2025-06-25 21:37:00,841] INFO in data_extractor: 正在保存学生登录凭据...
+[2025-06-25 21:37:00,871] INFO in data_extractor: 更新学生信息: 周宇清
+[2025-06-25 21:37:00,871] INFO in data_extractor: 正在保存学生登录凭据...
+[2025-06-25 21:37:00,916] INFO in data_extractor: 更新学生凭据: 周宇清 (242040390)
+[2025-06-25 21:37:01,036] INFO in data_extractor: 正在清理和标准化数据...
+[2025-06-25 21:37:01,036] INFO in data_extractor: 建立教师映射: 形势与政策2 → 杨文文,檀敏,张焱,张安琪
+[2025-06-25 21:37:01,036] INFO in data_extractor: 建立教师映射: Java Web程序设计[E] → 郑一然
+[2025-06-25 21:37:01,036] INFO in data_extractor: 建立教师映射: Java Web程序设计[E] → 郑一然
+[2025-06-25 21:37:01,037] INFO in data_extractor: 建立教师映射: Java Web程序设计[E] → 郑一然
+[2025-06-25 21:37:01,037] INFO in data_extractor: 建立教师映射: Python程序设计 → 钱惠梦
+[2025-06-25 21:37:01,037] INFO in data_extractor: 建立教师映射: Python程序设计 → 钱惠梦
+[2025-06-25 21:37:01,037] INFO in data_extractor: 建立教师映射: 大学生职业发展与就业指导2 → 陈珊珊
+[2025-06-25 21:37:01,037] INFO in data_extractor: 建立教师映射: 操作系统 → 王媛媛
+[2025-06-25 21:37:01,037] INFO in data_extractor: 建立教师映射: 操作系统 → 王媛媛
+[2025-06-25 21:37:01,037] INFO in data_extractor: 建立教师映射: 数据库原理与应用 → 韩瑶妹
+[2025-06-25 21:37:01,037] INFO in data_extractor: 建立教师映射: 数据库原理与应用 → 韩瑶妹
+[2025-06-25 21:37:01,037] INFO in data_extractor: 建立了 6 个教师映射关系
+[2025-06-25 21:37:01,037] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 大学生职业发展与就业指导1(42202001)
+[2025-06-25 21:37:01,038] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 数据结构(04212002)
+[2025-06-25 21:37:01,038] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: Java面向对象编程技术(04212001)
+[2025-06-25 21:37:01,038] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 数据结构课程设计(04232001)
+[2025-06-25 21:37:01,038] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 形势与政策1(11202001)
+[2025-06-25 21:37:01,038] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 网页设计(04462001)
+[2025-06-25 21:37:01,038] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 当代大学生国家安全教育(19151902)
+[2025-06-25 21:37:01,039] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 中药学(19102013)
+[2025-06-25 21:37:01,039] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 计算机通信网络技术(04222003)
+[2025-06-25 21:37:01,039] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 世界建筑史(19122207)
+[2025-06-25 21:37:01,039] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 计算机组成原理(04212401)
+[2025-06-25 21:37:01,040] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 《汉书》导读(19102012)
+[2025-06-25 21:37:01,040] INFO in data_extractor: ✅ 课程表直接匹配找到真实教师: Java Web程序设计[E] → 郑一然
+[2025-06-25 21:37:01,040] INFO in data_extractor: ✅ 成功补充真实教师信息: Java Web程序设计[E](04462002) → 郑一然
+[2025-06-25 21:37:01,041] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 中国陶瓷鉴赏与器物陈设(19122202)
+[2025-06-25 21:37:01,041] INFO in data_extractor: 真实教师信息补全统计:
+[2025-06-25 21:37:01,041] INFO in data_extractor:   总课程数: 14
+[2025-06-25 21:37:01,041] INFO in data_extractor:   找到真实教师: 1 (7.1%)
+[2025-06-25 21:37:01,041] INFO in data_extractor:   未找到教师: 13 (92.9%)
+[2025-06-25 21:37:01,041] INFO in data_extractor: 正在优化课程名称显示...
+[2025-06-25 21:37:01,041] INFO in data_extractor: 开始过滤 grade 数据，原始数据量: 14
+[2025-06-25 21:37:01,041] INFO in data_extractor: [课程名称检查] 原始课程名: '大学生职业发展与就业指导1', 数据类型: grade
+[2025-06-25 21:37:01,041] INFO in data_extractor: ✅ grade保留真实中文名: '大学生职业发展与就业指导1'
+[2025-06-25 21:37:01,041] INFO in data_extractor: [课程名称检查] 原始课程名: '数据结构', 数据类型: grade
+[2025-06-25 21:37:01,041] INFO in data_extractor: ✅ grade保留真实中文名: '数据结构'
+[2025-06-25 21:37:01,041] INFO in data_extractor: [课程名称检查] 原始课程名: 'Java面向对象编程技术', 数据类型: grade
+[2025-06-25 21:37:01,041] INFO in data_extractor: ✅ grade保留真实中文名: 'Java面向对象编程技术'
+[2025-06-25 21:37:01,041] INFO in data_extractor: [课程名称检查] 原始课程名: '数据结构课程设计', 数据类型: grade
+[2025-06-25 21:37:01,041] INFO in data_extractor: ✅ grade保留真实中文名: '数据结构课程设计'
+[2025-06-25 21:37:01,041] INFO in data_extractor: [课程名称检查] 原始课程名: '形势与政策1', 数据类型: grade
+[2025-06-25 21:37:01,042] INFO in data_extractor: ✅ grade保留真实中文名: '形势与政策1'
+[2025-06-25 21:37:01,042] INFO in data_extractor: [课程名称检查] 原始课程名: '网页设计', 数据类型: grade
+[2025-06-25 21:37:01,042] INFO in data_extractor: ✅ grade保留真实中文名: '网页设计'
+[2025-06-25 21:37:01,042] INFO in data_extractor: [课程名称检查] 原始课程名: '当代大学生国家安全教育', 数据类型: grade
+[2025-06-25 21:37:01,042] INFO in data_extractor: ✅ grade保留真实中文名: '当代大学生国家安全教育'
+[2025-06-25 21:37:01,042] INFO in data_extractor: [课程名称检查] 原始课程名: '中药学', 数据类型: grade
+[2025-06-25 21:37:01,042] INFO in data_extractor: ✅ grade保留真实中文名: '中药学'
+[2025-06-25 21:37:01,042] INFO in data_extractor: [课程名称检查] 原始课程名: '计算机通信网络技术', 数据类型: grade
+[2025-06-25 21:37:01,042] INFO in data_extractor: ✅ grade保留真实中文名: '计算机通信网络技术'
+[2025-06-25 21:37:01,042] INFO in data_extractor: [课程名称检查] 原始课程名: '世界建筑史', 数据类型: grade
+[2025-06-25 21:37:01,042] INFO in data_extractor: ✅ grade保留真实中文名: '世界建筑史'
+[2025-06-25 21:37:01,042] INFO in data_extractor: [课程名称检查] 原始课程名: '计算机组成原理', 数据类型: grade
+[2025-06-25 21:37:01,042] INFO in data_extractor: ✅ grade保留真实中文名: '计算机组成原理'
+[2025-06-25 21:37:01,042] INFO in data_extractor: [课程名称检查] 原始课程名: '《汉书》导读', 数据类型: grade
+[2025-06-25 21:37:01,042] INFO in data_extractor: ✅ grade保留真实中文名: '《汉书》导读'
+[2025-06-25 21:37:01,042] INFO in data_extractor: [课程名称检查] 原始课程名: 'Java Web程序设计[E]', 数据类型: grade
+[2025-06-25 21:37:01,042] INFO in data_extractor: ✅ grade保留真实中文名: 'Java Web程序设计[E]'
+[2025-06-25 21:37:01,043] INFO in data_extractor: [课程名称检查] 原始课程名: '中国陶瓷鉴赏与器物陈设', 数据类型: grade
+[2025-06-25 21:37:01,043] INFO in data_extractor: ✅ grade保留真实中文名: '中国陶瓷鉴赏与器物陈设'
+[2025-06-25 21:37:01,043] INFO in data_extractor: 📊 grade数据过滤结果: 原始14条 → 保留14条
+[2025-06-25 21:37:01,043] INFO in data_extractor: 构建了 14 个课程代码到中文名的映射
+[2025-06-25 21:37:01,043] INFO in data_extractor: 开始过滤 course 数据，原始数据量: 11
+[2025-06-25 21:37:01,043] INFO in data_extractor: [课程名称检查] 原始课程名: '形势与政策2', 数据类型: course
+[2025-06-25 21:37:01,043] INFO in data_extractor: ✅ course保留真实中文名: '形势与政策2'
+[2025-06-25 21:37:01,043] INFO in data_extractor: [课程名称检查] 原始课程名: 'Java Web程序设计[E]', 数据类型: course
+[2025-06-25 21:37:01,043] INFO in data_extractor: ✅ course保留真实中文名: 'Java Web程序设计[E]'
+[2025-06-25 21:37:01,043] INFO in data_extractor: [课程名称检查] 原始课程名: 'Java Web程序设计[E]', 数据类型: course
+[2025-06-25 21:37:01,043] INFO in data_extractor: ✅ course保留真实中文名: 'Java Web程序设计[E]'
+[2025-06-25 21:37:01,043] INFO in data_extractor: [课程名称检查] 原始课程名: 'Java Web程序设计[E]', 数据类型: course
+[2025-06-25 21:37:01,043] INFO in data_extractor: ✅ course保留真实中文名: 'Java Web程序设计[E]'
+[2025-06-25 21:37:01,043] INFO in data_extractor: [课程名称检查] 原始课程名: 'Python程序设计', 数据类型: course
+[2025-06-25 21:37:01,043] INFO in data_extractor: ✅ course保留真实中文名: 'Python程序设计'
+[2025-06-25 21:37:01,043] INFO in data_extractor: [课程名称检查] 原始课程名: 'Python程序设计', 数据类型: course
+[2025-06-25 21:37:01,043] INFO in data_extractor: ✅ course保留真实中文名: 'Python程序设计'
+[2025-06-25 21:37:01,044] INFO in data_extractor: [课程名称检查] 原始课程名: '大学生职业发展与就业指导2', 数据类型: course
+[2025-06-25 21:37:01,044] INFO in data_extractor: ✅ course保留真实中文名: '大学生职业发展与就业指导2'
+[2025-06-25 21:37:01,044] INFO in data_extractor: [课程名称检查] 原始课程名: '操作系统', 数据类型: course
+[2025-06-25 21:37:01,044] INFO in data_extractor: ✅ course保留真实中文名: '操作系统'
+[2025-06-25 21:37:01,044] INFO in data_extractor: [课程名称检查] 原始课程名: '操作系统', 数据类型: course
+[2025-06-25 21:37:01,044] INFO in data_extractor: ✅ course保留真实中文名: '操作系统'
+[2025-06-25 21:37:01,044] INFO in data_extractor: [课程名称检查] 原始课程名: '数据库原理与应用', 数据类型: course
+[2025-06-25 21:37:01,044] INFO in data_extractor: ✅ course保留真实中文名: '数据库原理与应用'
+[2025-06-25 21:37:01,044] INFO in data_extractor: [课程名称检查] 原始课程名: '数据库原理与应用', 数据类型: course
+[2025-06-25 21:37:01,044] INFO in data_extractor: ✅ course保留真实中文名: '数据库原理与应用'
+[2025-06-25 21:37:01,044] INFO in data_extractor: 📊 course数据过滤结果: 原始11条 → 保留11条
+[2025-06-25 21:37:01,044] INFO in data_extractor: 开始过滤 exam 数据，原始数据量: 4
+[2025-06-25 21:37:01,044] INFO in data_extractor: [课程名称检查] 原始课程名: '数据库原理与应用', 数据类型: exam
+[2025-06-25 21:37:01,044] INFO in data_extractor: ✅ exam保留考试数据的真实中文名: '数据库原理与应用'
+[2025-06-25 21:37:01,044] INFO in data_extractor: [课程名称检查] 原始课程名: 'Python程序设计', 数据类型: exam
+[2025-06-25 21:37:01,044] INFO in data_extractor: ✅ exam保留考试数据的真实中文名: 'Python程序设计'
+[2025-06-25 21:37:01,044] INFO in data_extractor: [课程名称检查] 原始课程名: '操作系统', 数据类型: exam
+[2025-06-25 21:37:01,045] INFO in data_extractor: ✅ exam保留考试数据的真实中文名: '操作系统'
+[2025-06-25 21:37:01,045] INFO in data_extractor: [课程名称检查] 原始课程名: '《汉书》导读', 数据类型: exam
+[2025-06-25 21:37:01,045] INFO in data_extractor: ✅ exam保留考试数据的真实中文名: '《汉书》导读'
+[2025-06-25 21:37:01,045] INFO in data_extractor: 📊 exam数据过滤结果: 原始4条 → 保留4条
+[2025-06-25 21:37:01,045] INFO in data_extractor: 清理后数据统计: 课程11条, 考试4条, 成绩14条
+[2025-06-25 21:37:02,065] INFO in data_extractor: 数据保存成功
+[2025-06-25 21:37:02,065] INFO in data_extractor: 数据保存成功 - 更新了用户 周宇清 的数据
+[2025-06-25 21:37:02,065] INFO in data_extractor: 步骤7: 创建用户会话
+[2025-06-25 21:37:02,069] INFO in data_extractor: 更新学生凭据: 周宇清 (242040390)
+[2025-06-25 21:37:02,194] INFO in data_extractor: 正在清理和标准化数据...
+[2025-06-25 21:37:02,194] INFO in data_extractor: 建立教师映射: 形势与政策2 → 杨文文,檀敏,张焱,张安琪
+[2025-06-25 21:37:02,194] INFO in data_extractor: 建立教师映射: Java Web程序设计[E] → 郑一然
+[2025-06-25 21:37:02,194] INFO in data_extractor: 建立教师映射: Java Web程序设计[E] → 郑一然
+[2025-06-25 21:37:02,194] INFO in data_extractor: 建立教师映射: Java Web程序设计[E] → 郑一然
+[2025-06-25 21:37:02,195] INFO in data_extractor: 建立教师映射: Python程序设计 → 钱惠梦
+[2025-06-25 21:37:02,195] INFO in data_extractor: 建立教师映射: Python程序设计 → 钱惠梦
+[2025-06-25 21:37:02,195] INFO in data_extractor: 建立教师映射: 大学生职业发展与就业指导2 → 陈珊珊
+[2025-06-25 21:37:02,195] INFO in data_extractor: 建立教师映射: 操作系统 → 王媛媛
+[2025-06-25 21:37:02,195] INFO in data_extractor: 建立教师映射: 操作系统 → 王媛媛
+[2025-06-25 21:37:02,195] INFO in data_extractor: 建立教师映射: 数据库原理与应用 → 韩瑶妹
+[2025-06-25 21:37:02,196] INFO in data_extractor: 建立教师映射: 数据库原理与应用 → 韩瑶妹
+[2025-06-25 21:37:02,196] INFO in data_extractor: 建立了 6 个教师映射关系
+[2025-06-25 21:37:02,196] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 大学生职业发展与就业指导1(42202001)
+[2025-06-25 21:37:02,196] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 数据结构(04212002)
+[2025-06-25 21:37:02,196] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: Java面向对象编程技术(04212001)
+[2025-06-25 21:37:02,196] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 数据结构课程设计(04232001)
+[2025-06-25 21:37:02,196] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 形势与政策1(11202001)
+[2025-06-25 21:37:02,196] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 网页设计(04462001)
+[2025-06-25 21:37:02,196] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 当代大学生国家安全教育(19151902)
+[2025-06-25 21:37:02,196] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 中药学(19102013)
+[2025-06-25 21:37:02,196] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 计算机通信网络技术(04222003)
+[2025-06-25 21:37:02,197] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 世界建筑史(19122207)
+[2025-06-25 21:37:02,197] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 计算机组成原理(04212401)
+[2025-06-25 21:37:02,197] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 《汉书》导读(19102012)
+[2025-06-25 21:37:02,197] INFO in data_extractor: ✅ 课程表直接匹配找到真实教师: Java Web程序设计[E] → 郑一然
+[2025-06-25 21:37:02,197] INFO in data_extractor: ✅ 成功补充真实教师信息: Java Web程序设计[E](04462002) → 郑一然
+[2025-06-25 21:37:02,197] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 中国陶瓷鉴赏与器物陈设(19122202)
+[2025-06-25 21:37:02,197] INFO in data_extractor: 真实教师信息补全统计:
+[2025-06-25 21:37:02,197] INFO in data_extractor:   总课程数: 14
+[2025-06-25 21:37:02,197] INFO in data_extractor:   找到真实教师: 1 (7.1%)
+[2025-06-25 21:37:02,197] INFO in data_extractor:   未找到教师: 13 (92.9%)
+[2025-06-25 21:37:02,197] INFO in data_extractor: 正在优化课程名称显示...
+[2025-06-25 21:37:02,197] INFO in data_extractor: 开始过滤 grade 数据，原始数据量: 14
+[2025-06-25 21:37:02,197] INFO in data_extractor: [课程名称检查] 原始课程名: '大学生职业发展与就业指导1', 数据类型: grade
+[2025-06-25 21:37:02,197] INFO in data_extractor: ✅ grade保留真实中文名: '大学生职业发展与就业指导1'
+[2025-06-25 21:37:02,197] INFO in data_extractor: [课程名称检查] 原始课程名: '数据结构', 数据类型: grade
+[2025-06-25 21:37:02,198] INFO in data_extractor: ✅ grade保留真实中文名: '数据结构'
+[2025-06-25 21:37:02,198] INFO in data_extractor: [课程名称检查] 原始课程名: 'Java面向对象编程技术', 数据类型: grade
+[2025-06-25 21:37:02,198] INFO in data_extractor: ✅ grade保留真实中文名: 'Java面向对象编程技术'
+[2025-06-25 21:37:02,198] INFO in data_extractor: [课程名称检查] 原始课程名: '数据结构课程设计', 数据类型: grade
+[2025-06-25 21:37:02,198] INFO in data_extractor: ✅ grade保留真实中文名: '数据结构课程设计'
+[2025-06-25 21:37:02,198] INFO in data_extractor: [课程名称检查] 原始课程名: '形势与政策1', 数据类型: grade
+[2025-06-25 21:37:02,198] INFO in data_extractor: ✅ grade保留真实中文名: '形势与政策1'
+[2025-06-25 21:37:02,198] INFO in data_extractor: [课程名称检查] 原始课程名: '网页设计', 数据类型: grade
+[2025-06-25 21:37:02,198] INFO in data_extractor: ✅ grade保留真实中文名: '网页设计'
+[2025-06-25 21:37:02,198] INFO in data_extractor: [课程名称检查] 原始课程名: '当代大学生国家安全教育', 数据类型: grade
+[2025-06-25 21:37:02,198] INFO in data_extractor: ✅ grade保留真实中文名: '当代大学生国家安全教育'
+[2025-06-25 21:37:02,198] INFO in data_extractor: [课程名称检查] 原始课程名: '中药学', 数据类型: grade
+[2025-06-25 21:37:02,198] INFO in data_extractor: ✅ grade保留真实中文名: '中药学'
+[2025-06-25 21:37:02,198] INFO in data_extractor: [课程名称检查] 原始课程名: '计算机通信网络技术', 数据类型: grade
+[2025-06-25 21:37:02,198] INFO in data_extractor: ✅ grade保留真实中文名: '计算机通信网络技术'
+[2025-06-25 21:37:02,198] INFO in data_extractor: [课程名称检查] 原始课程名: '世界建筑史', 数据类型: grade
+[2025-06-25 21:37:02,199] INFO in data_extractor: ✅ grade保留真实中文名: '世界建筑史'
+[2025-06-25 21:37:02,199] INFO in data_extractor: [课程名称检查] 原始课程名: '计算机组成原理', 数据类型: grade
+[2025-06-25 21:37:02,199] INFO in data_extractor: ✅ grade保留真实中文名: '计算机组成原理'
+[2025-06-25 21:37:02,199] INFO in data_extractor: [课程名称检查] 原始课程名: '《汉书》导读', 数据类型: grade
+[2025-06-25 21:37:02,199] INFO in data_extractor: ✅ grade保留真实中文名: '《汉书》导读'
+[2025-06-25 21:37:02,199] INFO in data_extractor: [课程名称检查] 原始课程名: 'Java Web程序设计[E]', 数据类型: grade
+[2025-06-25 21:37:02,199] INFO in data_extractor: ✅ grade保留真实中文名: 'Java Web程序设计[E]'
+[2025-06-25 21:37:02,199] INFO in data_extractor: [课程名称检查] 原始课程名: '中国陶瓷鉴赏与器物陈设', 数据类型: grade
+[2025-06-25 21:37:02,199] INFO in data_extractor: ✅ grade保留真实中文名: '中国陶瓷鉴赏与器物陈设'
+[2025-06-25 21:37:02,199] INFO in data_extractor: 📊 grade数据过滤结果: 原始14条 → 保留14条
+[2025-06-25 21:37:02,199] INFO in data_extractor: 构建了 14 个课程代码到中文名的映射
+[2025-06-25 21:37:02,199] INFO in data_extractor: 开始过滤 course 数据，原始数据量: 11
+[2025-06-25 21:37:02,199] INFO in data_extractor: [课程名称检查] 原始课程名: '形势与政策2', 数据类型: course
+[2025-06-25 21:37:02,199] INFO in data_extractor: ✅ course保留真实中文名: '形势与政策2'
+[2025-06-25 21:37:02,199] INFO in data_extractor: [课程名称检查] 原始课程名: 'Java Web程序设计[E]', 数据类型: course
+[2025-06-25 21:37:02,199] INFO in data_extractor: ✅ course保留真实中文名: 'Java Web程序设计[E]'
+[2025-06-25 21:37:02,199] INFO in data_extractor: [课程名称检查] 原始课程名: 'Java Web程序设计[E]', 数据类型: course
+[2025-06-25 21:37:02,200] INFO in data_extractor: ✅ course保留真实中文名: 'Java Web程序设计[E]'
+[2025-06-25 21:37:02,200] INFO in data_extractor: [课程名称检查] 原始课程名: 'Java Web程序设计[E]', 数据类型: course
+[2025-06-25 21:37:02,200] INFO in data_extractor: ✅ course保留真实中文名: 'Java Web程序设计[E]'
+[2025-06-25 21:37:02,200] INFO in data_extractor: [课程名称检查] 原始课程名: 'Python程序设计', 数据类型: course
+[2025-06-25 21:37:02,200] INFO in data_extractor: ✅ course保留真实中文名: 'Python程序设计'
+[2025-06-25 21:37:02,200] INFO in data_extractor: [课程名称检查] 原始课程名: 'Python程序设计', 数据类型: course
+[2025-06-25 21:37:02,200] INFO in data_extractor: ✅ course保留真实中文名: 'Python程序设计'
+[2025-06-25 21:37:02,200] INFO in data_extractor: [课程名称检查] 原始课程名: '大学生职业发展与就业指导2', 数据类型: course
+[2025-06-25 21:37:02,200] INFO in data_extractor: ✅ course保留真实中文名: '大学生职业发展与就业指导2'
+[2025-06-25 21:37:02,200] INFO in data_extractor: [课程名称检查] 原始课程名: '操作系统', 数据类型: course
+[2025-06-25 21:37:02,200] INFO in data_extractor: ✅ course保留真实中文名: '操作系统'
+[2025-06-25 21:37:02,200] INFO in data_extractor: [课程名称检查] 原始课程名: '操作系统', 数据类型: course
+[2025-06-25 21:37:02,200] INFO in data_extractor: ✅ course保留真实中文名: '操作系统'
+[2025-06-25 21:37:02,200] INFO in data_extractor: [课程名称检查] 原始课程名: '数据库原理与应用', 数据类型: course
+[2025-06-25 21:37:02,200] INFO in data_extractor: ✅ course保留真实中文名: '数据库原理与应用'
+[2025-06-25 21:37:02,200] INFO in data_extractor: [课程名称检查] 原始课程名: '数据库原理与应用', 数据类型: course
+[2025-06-25 21:37:02,200] INFO in data_extractor: ✅ course保留真实中文名: '数据库原理与应用'
+[2025-06-25 21:37:02,201] INFO in data_extractor: 📊 course数据过滤结果: 原始11条 → 保留11条
+[2025-06-25 21:37:02,201] INFO in data_extractor: 开始过滤 exam 数据，原始数据量: 4
+[2025-06-25 21:37:02,201] INFO in data_extractor: [课程名称检查] 原始课程名: '数据库原理与应用', 数据类型: exam
+[2025-06-25 21:37:02,201] INFO in data_extractor: ✅ exam保留考试数据的真实中文名: '数据库原理与应用'
+[2025-06-25 21:37:02,201] INFO in data_extractor: [课程名称检查] 原始课程名: 'Python程序设计', 数据类型: exam
+[2025-06-25 21:37:02,201] INFO in data_extractor: ✅ exam保留考试数据的真实中文名: 'Python程序设计'
+[2025-06-25 21:37:02,201] INFO in data_extractor: [课程名称检查] 原始课程名: '操作系统', 数据类型: exam
+[2025-06-25 21:37:02,201] INFO in data_extractor: ✅ exam保留考试数据的真实中文名: '操作系统'
+[2025-06-25 21:37:02,201] INFO in data_extractor: [课程名称检查] 原始课程名: '《汉书》导读', 数据类型: exam
+[2025-06-25 21:37:02,201] INFO in data_extractor: ✅ exam保留考试数据的真实中文名: '《汉书》导读'
+[2025-06-25 21:37:02,201] INFO in data_extractor: 📊 exam数据过滤结果: 原始4条 → 保留4条
+[2025-06-25 21:37:02,201] INFO in data_extractor: 清理后数据统计: 课程11条, 考试4条, 成绩14条
+[2025-06-25 21:37:02,596] INFO in data_extractor: 用户会话创建成功: d24081d7-c755-482d-a29d-60fa4cf3156d
+[2025-06-25 21:37:02,597] INFO in data_extractor: 用户会话创建成功: d24081d7-c755-482d-a29d-60fa4cf3156d
+[2025-06-25 21:37:02,597] INFO in data_extractor: 用户 242040390 数据处理成功，耗时 5.72 秒
+[2025-06-25 21:37:02,598] INFO in api_server: 用户 242040390 数据处理成功，耗时 5.74 秒
+[2025-06-25 21:37:02,602] INFO in _internal: 127.0.0.1 - - [25/Jun/2025 21:37:02] "POST /extract HTTP/1.1" 200 -
+[2025-06-25 21:37:03,198] INFO in data_extractor: 数据保存成功
+[2025-06-25 21:37:03,199] INFO in data_extractor: 数据保存成功 - 更新了用户 周宇清 的数据
+[2025-06-25 21:37:03,199] INFO in data_extractor: 步骤7: 创建用户会话
+[2025-06-25 21:37:03,655] INFO in data_extractor: 用户会话创建成功: b539054b-a81e-4402-b73d-99ad3798e33c
+[2025-06-25 21:37:03,655] INFO in data_extractor: 用户会话创建成功: b539054b-a81e-4402-b73d-99ad3798e33c
+[2025-06-25 21:37:03,655] INFO in data_extractor: 用户 242040390 数据处理成功，耗时 6.78 秒
+[2025-06-25 21:37:03,656] INFO in api_server: 用户 242040390 数据处理成功，耗时 6.79 秒
+[2025-06-25 21:37:03,657] INFO in _internal: 127.0.0.1 - - [25/Jun/2025 21:37:03] "POST /extract HTTP/1.1" 200 -
+[2025-06-25 21:58:32,071] INFO in api_server: 【日志测试】收到/extract请求
+[2025-06-25 21:58:32,071] INFO in api_server: 收到数据提取请求 - 时间: 2025-06-25 21:58:32.071426
+[2025-06-25 21:58:32,072] INFO in api_server: 请求数据: {'student_id': '242040390', 'password': 'Zzhouyu007'}
+[2025-06-25 21:58:32,072] INFO in api_server: 开始处理用户: 242040390
+[2025-06-25 21:58:32,072] INFO in api_server: 数据提取器实例创建成功
+[2025-06-25 21:58:32,073] INFO in data_extractor: 开始处理用户: 242040390
+[2025-06-25 21:58:32,073] INFO in data_extractor: 开始为用户 242040390 提取和保存数据
+[2025-06-25 21:58:32,073] INFO in data_extractor: 步骤0: 检查用户是否已存在于数据库中
+[2025-06-25 21:58:32,961] INFO in data_extractor: 用户 242040390 已存在: 周宇清 - 将更新数据
+[2025-06-25 21:58:32,962] INFO in data_extractor: 步骤1: 登录系统
+[2025-06-25 21:58:32,962] INFO in data_extractor: 开始登录用户: 242040390
+[2025-06-25 21:58:32,962] INFO in data_extractor: 正在获取登录页面...
+[2025-06-25 21:58:33,309] INFO in data_extractor: 登录页面响应状态: 200
+[2025-06-25 21:58:33,309] INFO in data_extractor: 密码加密前缀: 5484968f-bb22-44f7-b047-cbb8b7f8fa3e-
+[2025-06-25 21:58:33,309] INFO in data_extractor: 准备发送登录请求，等待1秒...
+[2025-06-25 21:58:34,467] INFO in data_extractor: 登录响应状态码: 200
+[2025-06-25 21:58:34,467] INFO in data_extractor: 登录响应URL: https://jwxt.masu.edu.cn:443/eams/home.action
+[2025-06-25 21:58:34,467] INFO in data_extractor: 登录成功 - 检测到系统主页面
+[2025-06-25 21:58:34,467] INFO in data_extractor: 登录成功: 登录成功
+[2025-06-25 21:58:34,467] INFO in data_extractor: 步骤2: 获取学生信息
+[2025-06-25 21:58:34,467] INFO in data_extractor: 开始获取学生信息...
+[2025-06-25 21:58:34,467] INFO in data_extractor: 尝试从 https://jwxt.masu.edu.cn/eams/stdDetail.action 获取详细学生信息...
+[2025-06-25 21:58:34,554] INFO in data_extractor: ✅ 学号: 242040390
+[2025-06-25 21:58:34,554] INFO in data_extractor: ✅ 姓名: 周宇清
+[2025-06-25 21:58:34,554] INFO in data_extractor: ✅ 性别: 男
+[2025-06-25 21:58:34,554] INFO in data_extractor: ✅ 年级: 2024
+[2025-06-25 21:58:34,554] INFO in data_extractor: ✅ 学制: 2
+[2025-06-25 21:58:34,555] INFO in data_extractor: ✅ 项目: 本科
+[2025-06-25 21:58:34,555] INFO in data_extractor: ✅ 学历层次: 专科起点本科
+[2025-06-25 21:58:34,555] INFO in data_extractor: ✅ 学生类别: 普通本科生
+[2025-06-25 21:58:34,555] INFO in data_extractor: ✅ 院系: 大数据与人工智能学院
+[2025-06-25 21:58:34,555] INFO in data_extractor: ✅ 专业: 软件工程（专升本）
+[2025-06-25 21:58:34,555] INFO in data_extractor: ✅ 入校时间: 2024-09-07
+[2025-06-25 21:58:34,555] INFO in data_extractor: ✅ 毕业时间: 2026-07-01
+[2025-06-25 21:58:34,555] INFO in data_extractor: ✅ 行政管理院系: 大数据与人工智能学院
+[2025-06-25 21:58:34,555] INFO in data_extractor: ✅ 是否在籍: 是
+[2025-06-25 21:58:34,555] INFO in data_extractor: ✅ 是否在校: 是
+[2025-06-25 21:58:34,556] INFO in data_extractor: ✅ 所属班级: 软升243
+[2025-06-25 21:58:34,556] INFO in data_extractor: ✅ 是否有学籍: 是
+[2025-06-25 21:58:34,556] INFO in data_extractor: ✅ 学籍状态: 在校
+[2025-06-25 21:58:34,556] INFO in data_extractor: ✅ 民族: 汉族
+[2025-06-25 21:58:34,556] INFO in data_extractor: ✅ 健康状况: 健康
+[2025-06-25 21:58:34,556] INFO in data_extractor: ✅ 政治面貌: 共青团员
+[2025-06-25 21:58:34,556] INFO in data_extractor: 从表格中找到 21 个字段
+[2025-06-25 21:58:34,556] INFO in data_extractor: 最终获取的学生信息: {'student_id': '242040390', 'student_name': '周宇清', 'major': '软件工程（专升本）', 'department': '大数据与人工智能学院', 'grade': '2024', 'class_name': '软升243', 'student_type': '普通本科生', 'enrollment_date': '2024-09-07', 'graduation_date': '2026-07-01', 'study_duration': '2', 'gender': '男', 'political_status': '共青团员', 'ethnic_group': '汉族', 'health_status': '健康', 'campus': '', 'student_status': '在校', 'is_enrolled': '是', 'is_on_campus': '是', 'project_type': '本科', 'education_level': '专科起点本科'}
+[2025-06-25 21:58:34,556] INFO in data_extractor: 过滤后student_info: {'student_id': '242040390', 'student_name': '周宇清', 'major': '软件工程（专升本）', 'department': '大数据与人工智能学院', 'grade': '2024', 'class_name': '软升243', 'student_type': '普通本科生', 'enrollment_date': '2024-09-07', 'graduation_date': '2026-07-01', 'study_duration': '2', 'gender': '男', 'political_status': '共青团员', 'ethnic_group': '汉族', 'health_status': '健康', 'campus': '', 'student_status': '在校', 'is_enrolled': '是', 'is_on_campus': '是', 'project_type': '本科', 'education_level': '专科起点本科'}
+[2025-06-25 21:58:34,556] INFO in data_extractor: 成功获取学生信息: 周宇清 (242040390)
+[2025-06-25 21:58:34,556] INFO in data_extractor: 步骤3: 获取课程表数据
+[2025-06-25 21:58:34,557] INFO in data_extractor: 开始获取课程表数据...
+[2025-06-25 21:58:34,557] INFO in data_extractor: 尝试获取课表框架页面: https://jwxt.masu.edu.cn/eams/courseTableForStd.action
+[2025-06-25 21:58:34,606] INFO in data_extractor: 尝试获取 project.id 从: https://jwxt.masu.edu.cn/eams/dataQuery.action
+[2025-06-25 21:58:34,643] INFO in data_extractor: 获取到的 project.id: 1
+[2025-06-25 21:58:34,644] INFO in data_extractor: 自动提取到课表ids: 41657
+[2025-06-25 21:58:34,644] INFO in data_extractor: 尝试获取实际课表数据从: https://jwxt.masu.edu.cn/eams/courseTableForStd!courseTable.action
+[2025-06-25 21:58:35,055] INFO in data_extractor: 解析到 11 门课程
+[2025-06-25 21:58:35,055] INFO in data_extractor: 获取到 11 条课程记录
+[2025-06-25 21:58:35,055] INFO in data_extractor: 步骤4: 获取考试数据
+[2025-06-25 21:58:35,055] INFO in data_extractor: 开始获取考试数据...
+[2025-06-25 21:58:35,055] INFO in data_extractor: 尝试从 https://jwxt.masu.edu.cn/eams/stdExamTable.action 获取考试批次...
+[2025-06-25 21:58:35,109] INFO in data_extractor: 找到考试批次ID: 661 - 2024-2025-2期末考试
+[2025-06-25 21:58:35,110] INFO in data_extractor: 尝试获取批次 661 的考试安排...
+[2025-06-25 21:58:35,218] INFO in data_extractor: 批次 661 表格标题: ['课程序号', '课程名称', '考试类别', '考试日期', '考试安排', '考试地点', '考场座位号', '考试情况', '其它说明']
+[2025-06-25 21:58:35,218] INFO in data_extractor: 批次 661 字段映射: {'course_name': 1, 'exam_type': 2, 'exam_date': 3, 'exam_time': 4, 'classroom': 5, 'seat_number': 6}
+[2025-06-25 21:58:35,218] INFO in data_extractor: [考试原始数据] 课程名: '数据库原理与应用', 类型: '期末考试', 日期: '2025-06-23'
+[2025-06-25 21:58:35,218] INFO in data_extractor: 找到考试: 数据库原理与应用 - 2025-06-23 - E311
+[2025-06-25 21:58:35,219] INFO in data_extractor: [考试原始数据] 课程名: 'Python程序设计', 类型: '期末考试', 日期: '2025-06-11'
+[2025-06-25 21:58:35,219] INFO in data_extractor: 找到考试: Python程序设计 - 2025-06-11 - 3号实验楼106
+[2025-06-25 21:58:35,219] INFO in data_extractor: [考试原始数据] 课程名: '操作系统', 类型: '期末考试', 日期: '2025-06-25'
+[2025-06-25 21:58:35,219] INFO in data_extractor: 找到考试: 操作系统 - 2025-06-25 - E209
+[2025-06-25 21:58:35,219] INFO in data_extractor: [考试原始数据] 课程名: '《汉书》导读', 类型: '期末考试', 日期: '时间未安排'
+[2025-06-25 21:58:35,220] INFO in data_extractor: 找到考试: 《汉书》导读 - 时间未安排 - 地点未安排
+[2025-06-25 21:58:35,220] INFO in data_extractor: 批次 661 共找到 4 条考试记录
+[2025-06-25 21:58:35,220] INFO in data_extractor: 总共解析到 4 条考试安排
+[2025-06-25 21:58:35,220] INFO in data_extractor: 去重后保留 4 条考试安排
+[2025-06-25 21:58:35,220] INFO in data_extractor: 获取到 4 条考试记录
+[2025-06-25 21:58:35,221] INFO in data_extractor: 步骤5: 获取成绩数据
+[2025-06-25 21:58:35,221] INFO in data_extractor: 开始获取成绩数据...
+[2025-06-25 21:58:35,221] INFO in data_extractor: 尝试从 https://jwxt.masu.edu.cn/eams/teach/grade/course/person!historyCourseGrade.action?projectType=MAJOR 获取成绩数据...
+[2025-06-25 21:58:35,284] INFO in data_extractor: 成绩表格标题: ['学年度', '学期', '门数', '总学分', '平均绩点']
+[2025-06-25 21:58:35,284] INFO in data_extractor: 成绩字段映射: {'credits': 3, 'grade_point': 4, 'semester': 1}
+[2025-06-25 21:58:35,284] WARNING in data_extractor: 跳过空课程名的成绩记录: {'course_name': '', 'course_code': '', 'credits': 5.0, 'grade': '', 'grade_point': 3.76, 'semester': '2', 'exam_type': '', 'course_type': '专业课', 'teacher': ''}
+[2025-06-25 21:58:35,285] WARNING in data_extractor: 跳过空课程名的成绩记录: {'course_name': '', 'course_code': '', 'credits': 20.0, 'grade': '', 'grade_point': 3.19, 'semester': '1', 'exam_type': '', 'course_type': '专业课', 'teacher': ''}
+[2025-06-25 21:58:35,285] WARNING in data_extractor: 跳过空课程名的成绩记录: {'course_name': '', 'course_code': '', 'credits': 3.3, 'grade': '', 'grade_point': None, 'semester': '14', 'exam_type': '', 'course_type': '专业课', 'teacher': ''}
+[2025-06-25 21:58:35,285] INFO in data_extractor: 成绩表格标题: ['学年学期', '课程代码', '课程序号', '课程名称', '课程类别', '学分', '总评成绩', '最终', '绩点']
+[2025-06-25 21:58:35,286] INFO in data_extractor: 成绩字段映射: {'course_name': 3, 'course_code': 1, 'credits': 5, 'grade': 6, 'grade_point': 8, 'semester': 0}
+[2025-06-25 21:58:35,286] INFO in data_extractor: [成绩原始数据] 课程名: '大学生职业发展与就业指导1', 课程代码: '42202001', 成绩: '良好'
+[2025-06-25 21:58:35,286] INFO in data_extractor: 找到成绩: 大学生职业发展与就业指导1 - 良好 - 2024-2025 1
+[2025-06-25 21:58:35,286] INFO in data_extractor: [成绩原始数据] 课程名: '数据结构', 课程代码: '04212002', 成绩: '75'
+[2025-06-25 21:58:35,287] INFO in data_extractor: 找到成绩: 数据结构 - 75 - 2024-2025 1
+[2025-06-25 21:58:35,287] INFO in data_extractor: [成绩原始数据] 课程名: 'Java面向对象编程技术', 课程代码: '04212001', 成绩: '99'
+[2025-06-25 21:58:35,287] INFO in data_extractor: 找到成绩: Java面向对象编程技术 - 99 - 2024-2025 1
+[2025-06-25 21:58:35,287] INFO in data_extractor: [成绩原始数据] 课程名: '数据结构课程设计', 课程代码: '04232001', 成绩: '良好'
+[2025-06-25 21:58:35,287] INFO in data_extractor: 找到成绩: 数据结构课程设计 - 良好 - 2024-2025 1
+[2025-06-25 21:58:35,287] INFO in data_extractor: [成绩原始数据] 课程名: '形势与政策1', 课程代码: '11202001', 成绩: '优秀'
+[2025-06-25 21:58:35,287] INFO in data_extractor: 找到成绩: 形势与政策1 - 优秀 - 2024-2025 1
+[2025-06-25 21:58:35,288] INFO in data_extractor: [成绩原始数据] 课程名: '网页设计', 课程代码: '04462001', 成绩: '84'
+[2025-06-25 21:58:35,288] INFO in data_extractor: 找到成绩: 网页设计 - 84 - 2024-2025 1
+[2025-06-25 21:58:35,288] INFO in data_extractor: [成绩原始数据] 课程名: '当代大学生国家安全教育', 课程代码: '19151902', 成绩: '93'
+[2025-06-25 21:58:35,288] INFO in data_extractor: 找到成绩: 当代大学生国家安全教育 - 93 - 2024-2025 1
+[2025-06-25 21:58:35,288] INFO in data_extractor: [成绩原始数据] 课程名: '中药学', 课程代码: '19102013', 成绩: '94'
+[2025-06-25 21:58:35,288] INFO in data_extractor: 找到成绩: 中药学 - 94 - 2024-2025 1
+[2025-06-25 21:58:35,288] INFO in data_extractor: [成绩原始数据] 课程名: '计算机通信网络技术', 课程代码: '04222003', 成绩: '66'
+[2025-06-25 21:58:35,288] INFO in data_extractor: 找到成绩: 计算机通信网络技术 - 66 - 2024-2025 1
+[2025-06-25 21:58:35,288] INFO in data_extractor: [成绩原始数据] 课程名: '世界建筑史', 课程代码: '19122207', 成绩: '99'
+[2025-06-25 21:58:35,288] INFO in data_extractor: 找到成绩: 世界建筑史 - 99 - 2024-2025 1
+[2025-06-25 21:58:35,288] INFO in data_extractor: [成绩原始数据] 课程名: '计算机组成原理', 课程代码: '04212401', 成绩: '83'
+[2025-06-25 21:58:35,288] INFO in data_extractor: 找到成绩: 计算机组成原理 - 83 - 2024-2025 1
+[2025-06-25 21:58:35,289] INFO in data_extractor: [成绩原始数据] 课程名: '《汉书》导读', 课程代码: '19102012', 成绩: '98'
+[2025-06-25 21:58:35,289] INFO in data_extractor: 找到成绩: 《汉书》导读 - 98 - 2024-2025 2
+[2025-06-25 21:58:35,289] INFO in data_extractor: [成绩原始数据] 课程名: 'Java Web程序设计[E]', 课程代码: '04462002', 成绩: '86'
+[2025-06-25 21:58:35,289] INFO in data_extractor: 找到成绩: Java Web程序设计[E] - 86 - 2024-2025 2
+[2025-06-25 21:58:35,289] INFO in data_extractor: [成绩原始数据] 课程名: '中国陶瓷鉴赏与器物陈设', 课程代码: '19122202', 成绩: '93'
+[2025-06-25 21:58:35,289] INFO in data_extractor: 找到成绩: 中国陶瓷鉴赏与器物陈设 - 93 - 2024-2025 2
+[2025-06-25 21:58:35,289] INFO in data_extractor: 从 https://jwxt.masu.edu.cn/eams/teach/grade/course/person!historyCourseGrade.action?projectType=MAJOR 找到 14 条成绩记录
+[2025-06-25 21:58:35,289] INFO in data_extractor: 总共解析到 14 条成绩记录
+[2025-06-25 21:58:35,289] INFO in data_extractor: 去重后保留 14 条成绩记录
+[2025-06-25 21:58:35,289] INFO in data_extractor: 获取到 14 条成绩记录
+[2025-06-25 21:58:35,289] INFO in data_extractor: 步骤6: 保存数据到数据库
+[2025-06-25 21:58:35,289] INFO in data_extractor: 原始student_info: {'student_id': '242040390', 'student_name': '周宇清', 'major': '软件工程（专升本）', 'department': '大数据与人工智能学院', 'grade': '2024', 'class_name': '软升243', 'student_type': '普通本科生', 'enrollment_date': '2024-09-07', 'graduation_date': '2026-07-01', 'study_duration': '2', 'gender': '男', 'political_status': '共青团员', 'ethnic_group': '汉族', 'health_status': '健康', 'campus': '', 'student_status': '在校', 'is_enrolled': '是', 'is_on_campus': '是', 'project_type': '本科', 'education_level': '专科起点本科'}
+[2025-06-25 21:58:35,688] INFO in data_extractor: 更新学生信息: 周宇清
+[2025-06-25 21:58:35,688] INFO in data_extractor: 正在保存学生登录凭据...
+[2025-06-25 21:58:35,750] INFO in data_extractor: 更新学生凭据: 周宇清 (242040390)
+[2025-06-25 21:58:35,867] INFO in data_extractor: 正在清理和标准化数据...
+[2025-06-25 21:58:35,867] INFO in data_extractor: 建立教师映射: 形势与政策2 → 杨文文,檀敏,张焱,张安琪
+[2025-06-25 21:58:35,867] INFO in data_extractor: 建立教师映射: Java Web程序设计[E] → 郑一然
+[2025-06-25 21:58:35,867] INFO in data_extractor: 建立教师映射: Java Web程序设计[E] → 郑一然
+[2025-06-25 21:58:35,867] INFO in data_extractor: 建立教师映射: Java Web程序设计[E] → 郑一然
+[2025-06-25 21:58:35,868] INFO in data_extractor: 建立教师映射: Python程序设计 → 钱惠梦
+[2025-06-25 21:58:35,868] INFO in data_extractor: 建立教师映射: Python程序设计 → 钱惠梦
+[2025-06-25 21:58:35,868] INFO in data_extractor: 建立教师映射: 大学生职业发展与就业指导2 → 陈珊珊
+[2025-06-25 21:58:35,868] INFO in data_extractor: 建立教师映射: 操作系统 → 王媛媛
+[2025-06-25 21:58:35,868] INFO in data_extractor: 建立教师映射: 操作系统 → 王媛媛
+[2025-06-25 21:58:35,869] INFO in data_extractor: 建立教师映射: 数据库原理与应用 → 韩瑶妹
+[2025-06-25 21:58:35,869] INFO in data_extractor: 建立教师映射: 数据库原理与应用 → 韩瑶妹
+[2025-06-25 21:58:35,869] INFO in data_extractor: 建立了 6 个教师映射关系
+[2025-06-25 21:58:35,869] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 大学生职业发展与就业指导1(42202001)
+[2025-06-25 21:58:35,869] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 数据结构(04212002)
+[2025-06-25 21:58:35,870] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: Java面向对象编程技术(04212001)
+[2025-06-25 21:58:35,870] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 数据结构课程设计(04232001)
+[2025-06-25 21:58:35,870] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 形势与政策1(11202001)
+[2025-06-25 21:58:35,870] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 网页设计(04462001)
+[2025-06-25 21:58:35,870] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 当代大学生国家安全教育(19151902)
+[2025-06-25 21:58:35,871] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 中药学(19102013)
+[2025-06-25 21:58:35,871] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 计算机通信网络技术(04222003)
+[2025-06-25 21:58:35,871] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 世界建筑史(19122207)
+[2025-06-25 21:58:35,871] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 计算机组成原理(04212401)
+[2025-06-25 21:58:35,872] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 《汉书》导读(19102012)
+[2025-06-25 21:58:35,872] INFO in data_extractor: ✅ 课程表直接匹配找到真实教师: Java Web程序设计[E] → 郑一然
+[2025-06-25 21:58:35,872] INFO in data_extractor: ✅ 成功补充真实教师信息: Java Web程序设计[E](04462002) → 郑一然
+[2025-06-25 21:58:35,872] INFO in data_extractor: ℹ️ 未找到真实教师信息，保持为空: 中国陶瓷鉴赏与器物陈设(19122202)
+[2025-06-25 21:58:35,872] INFO in data_extractor: 真实教师信息补全统计:
+[2025-06-25 21:58:35,873] INFO in data_extractor:   总课程数: 14
+[2025-06-25 21:58:35,873] INFO in data_extractor:   找到真实教师: 1 (7.1%)
+[2025-06-25 21:58:35,873] INFO in data_extractor:   未找到教师: 13 (92.9%)
+[2025-06-25 21:58:35,873] INFO in data_extractor: 正在优化课程名称显示...
+[2025-06-25 21:58:35,873] INFO in data_extractor: 开始过滤 grade 数据，原始数据量: 14
+[2025-06-25 21:58:35,873] INFO in data_extractor: [课程名称检查] 原始课程名: '大学生职业发展与就业指导1', 数据类型: grade
+[2025-06-25 21:58:35,873] INFO in data_extractor: ✅ grade保留真实中文名: '大学生职业发展与就业指导1'
+[2025-06-25 21:58:35,873] INFO in data_extractor: [课程名称检查] 原始课程名: '数据结构', 数据类型: grade
+[2025-06-25 21:58:35,873] INFO in data_extractor: ✅ grade保留真实中文名: '数据结构'
+[2025-06-25 21:58:35,873] INFO in data_extractor: [课程名称检查] 原始课程名: 'Java面向对象编程技术', 数据类型: grade
+[2025-06-25 21:58:35,873] INFO in data_extractor: ✅ grade保留真实中文名: 'Java面向对象编程技术'
+[2025-06-25 21:58:35,873] INFO in data_extractor: [课程名称检查] 原始课程名: '数据结构课程设计', 数据类型: grade
+[2025-06-25 21:58:35,873] INFO in data_extractor: ✅ grade保留真实中文名: '数据结构课程设计'
+[2025-06-25 21:58:35,873] INFO in data_extractor: [课程名称检查] 原始课程名: '形势与政策1', 数据类型: grade
+[2025-06-25 21:58:35,873] INFO in data_extractor: ✅ grade保留真实中文名: '形势与政策1'
+[2025-06-25 21:58:35,873] INFO in data_extractor: [课程名称检查] 原始课程名: '网页设计', 数据类型: grade
+[2025-06-25 21:58:35,874] INFO in data_extractor: ✅ grade保留真实中文名: '网页设计'
+[2025-06-25 21:58:35,874] INFO in data_extractor: [课程名称检查] 原始课程名: '当代大学生国家安全教育', 数据类型: grade
+[2025-06-25 21:58:35,874] INFO in data_extractor: ✅ grade保留真实中文名: '当代大学生国家安全教育'
+[2025-06-25 21:58:35,874] INFO in data_extractor: [课程名称检查] 原始课程名: '中药学', 数据类型: grade
+[2025-06-25 21:58:35,874] INFO in data_extractor: ✅ grade保留真实中文名: '中药学'
+[2025-06-25 21:58:35,874] INFO in data_extractor: [课程名称检查] 原始课程名: '计算机通信网络技术', 数据类型: grade
+[2025-06-25 21:58:35,874] INFO in data_extractor: ✅ grade保留真实中文名: '计算机通信网络技术'
+[2025-06-25 21:58:35,874] INFO in data_extractor: [课程名称检查] 原始课程名: '世界建筑史', 数据类型: grade
+[2025-06-25 21:58:35,874] INFO in data_extractor: ✅ grade保留真实中文名: '世界建筑史'
+[2025-06-25 21:58:35,874] INFO in data_extractor: [课程名称检查] 原始课程名: '计算机组成原理', 数据类型: grade
+[2025-06-25 21:58:35,874] INFO in data_extractor: ✅ grade保留真实中文名: '计算机组成原理'
+[2025-06-25 21:58:35,874] INFO in data_extractor: [课程名称检查] 原始课程名: '《汉书》导读', 数据类型: grade
+[2025-06-25 21:58:35,874] INFO in data_extractor: ✅ grade保留真实中文名: '《汉书》导读'
+[2025-06-25 21:58:35,874] INFO in data_extractor: [课程名称检查] 原始课程名: 'Java Web程序设计[E]', 数据类型: grade
+[2025-06-25 21:58:35,874] INFO in data_extractor: ✅ grade保留真实中文名: 'Java Web程序设计[E]'
+[2025-06-25 21:58:35,874] INFO in data_extractor: [课程名称检查] 原始课程名: '中国陶瓷鉴赏与器物陈设', 数据类型: grade
+[2025-06-25 21:58:35,875] INFO in data_extractor: ✅ grade保留真实中文名: '中国陶瓷鉴赏与器物陈设'
+[2025-06-25 21:58:35,875] INFO in data_extractor: 📊 grade数据过滤结果: 原始14条 → 保留14条
+[2025-06-25 21:58:35,875] INFO in data_extractor: 构建了 14 个课程代码到中文名的映射
+[2025-06-25 21:58:35,875] INFO in data_extractor: 开始过滤 course 数据，原始数据量: 11
+[2025-06-25 21:58:35,875] INFO in data_extractor: [课程名称检查] 原始课程名: '形势与政策2', 数据类型: course
+[2025-06-25 21:58:35,875] INFO in data_extractor: ✅ course保留真实中文名: '形势与政策2'
+[2025-06-25 21:58:35,875] INFO in data_extractor: [课程名称检查] 原始课程名: 'Java Web程序设计[E]', 数据类型: course
+[2025-06-25 21:58:35,875] INFO in data_extractor: ✅ course保留真实中文名: 'Java Web程序设计[E]'
+[2025-06-25 21:58:35,875] INFO in data_extractor: [课程名称检查] 原始课程名: 'Java Web程序设计[E]', 数据类型: course
+[2025-06-25 21:58:35,875] INFO in data_extractor: ✅ course保留真实中文名: 'Java Web程序设计[E]'
+[2025-06-25 21:58:35,875] INFO in data_extractor: [课程名称检查] 原始课程名: 'Java Web程序设计[E]', 数据类型: course
+[2025-06-25 21:58:35,875] INFO in data_extractor: ✅ course保留真实中文名: 'Java Web程序设计[E]'
+[2025-06-25 21:58:35,875] INFO in data_extractor: [课程名称检查] 原始课程名: 'Python程序设计', 数据类型: course
+[2025-06-25 21:58:35,875] INFO in data_extractor: ✅ course保留真实中文名: 'Python程序设计'
+[2025-06-25 21:58:35,875] INFO in data_extractor: [课程名称检查] 原始课程名: 'Python程序设计', 数据类型: course
+[2025-06-25 21:58:35,876] INFO in data_extractor: ✅ course保留真实中文名: 'Python程序设计'
+[2025-06-25 21:58:35,876] INFO in data_extractor: [课程名称检查] 原始课程名: '大学生职业发展与就业指导2', 数据类型: course
+[2025-06-25 21:58:35,876] INFO in data_extractor: ✅ course保留真实中文名: '大学生职业发展与就业指导2'
+[2025-06-25 21:58:35,876] INFO in data_extractor: [课程名称检查] 原始课程名: '操作系统', 数据类型: course
+[2025-06-25 21:58:35,876] INFO in data_extractor: ✅ course保留真实中文名: '操作系统'
+[2025-06-25 21:58:35,876] INFO in data_extractor: [课程名称检查] 原始课程名: '操作系统', 数据类型: course
+[2025-06-25 21:58:35,876] INFO in data_extractor: ✅ course保留真实中文名: '操作系统'
+[2025-06-25 21:58:35,876] INFO in data_extractor: [课程名称检查] 原始课程名: '数据库原理与应用', 数据类型: course
+[2025-06-25 21:58:35,876] INFO in data_extractor: ✅ course保留真实中文名: '数据库原理与应用'
+[2025-06-25 21:58:35,876] INFO in data_extractor: [课程名称检查] 原始课程名: '数据库原理与应用', 数据类型: course
+[2025-06-25 21:58:35,876] INFO in data_extractor: ✅ course保留真实中文名: '数据库原理与应用'
+[2025-06-25 21:58:35,876] INFO in data_extractor: 📊 course数据过滤结果: 原始11条 → 保留11条
+[2025-06-25 21:58:35,876] INFO in data_extractor: 开始过滤 exam 数据，原始数据量: 4
+[2025-06-25 21:58:35,876] INFO in data_extractor: [课程名称检查] 原始课程名: '数据库原理与应用', 数据类型: exam
+[2025-06-25 21:58:35,876] INFO in data_extractor: ✅ exam保留考试数据的真实中文名: '数据库原理与应用'
+[2025-06-25 21:58:35,876] INFO in data_extractor: [课程名称检查] 原始课程名: 'Python程序设计', 数据类型: exam
+[2025-06-25 21:58:35,877] INFO in data_extractor: ✅ exam保留考试数据的真实中文名: 'Python程序设计'
+[2025-06-25 21:58:35,877] INFO in data_extractor: [课程名称检查] 原始课程名: '操作系统', 数据类型: exam
+[2025-06-25 21:58:35,877] INFO in data_extractor: ✅ exam保留考试数据的真实中文名: '操作系统'
+[2025-06-25 21:58:35,877] INFO in data_extractor: [课程名称检查] 原始课程名: '《汉书》导读', 数据类型: exam
+[2025-06-25 21:58:35,878] INFO in data_extractor: ✅ exam保留考试数据的真实中文名: '《汉书》导读'
+[2025-06-25 21:58:35,878] INFO in data_extractor: 📊 exam数据过滤结果: 原始4条 → 保留4条
+[2025-06-25 21:58:35,878] INFO in data_extractor: 清理后数据统计: 课程11条, 考试4条, 成绩14条
+[2025-06-25 21:58:36,875] INFO in data_extractor: 数据保存成功
+[2025-06-25 21:58:36,876] INFO in data_extractor: 数据保存成功 - 更新了用户 周宇清 的数据
+[2025-06-25 21:58:36,876] INFO in data_extractor: 步骤7: 创建用户会话
+[2025-06-25 21:58:37,333] INFO in data_extractor: 用户会话创建成功: fbf44ad7-0b79-4e19-bddd-0ee0b3274321
+[2025-06-25 21:58:37,333] INFO in data_extractor: 用户会话创建成功: fbf44ad7-0b79-4e19-bddd-0ee0b3274321
+[2025-06-25 21:58:37,334] INFO in data_extractor: 用户 242040390 数据处理成功，耗时 5.26 秒
+[2025-06-25 21:58:37,334] INFO in api_server: 用户 242040390 数据处理成功，耗时 5.26 秒
+[2025-06-25 21:58:37,336] INFO in _internal: 127.0.0.1 - - [25/Jun/2025 21:58:37] "POST /extract HTTP/1.1" 200 -

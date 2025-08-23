@@ -1,0 +1,42 @@
+[2025-07-06 16:55:43,985] INFO in api_server: 【日志测试】setup_logging已执行，日志文件: D:\Zyq\桌面\stu\stu\logs\api_20250706.log
+[2025-07-06 16:55:43,996] INFO in api_server: 【日志测试】主入口已执行
+[2025-07-06 16:55:44,065] INFO in api_server: 【日志测试】Flask主进程启动
+[2025-07-06 16:55:44,066] INFO in api_server: [自动初始化] 正在检测并创建数据库及表...
+[2025-07-06 16:55:47,381] INFO in api_server: [自动初始化] 数据库和表结构已就绪！
+[2025-07-06 16:55:47,382] INFO in api_server: 正在启动学生数据提取API服务器...
+[2025-07-06 16:55:47,383] INFO in api_server: 可用接口:
+[2025-07-06 16:55:47,384] INFO in api_server:   POST /extract - 提取学生数据
+[2025-07-06 16:55:47,384] INFO in api_server:   GET  /health  - 健康检查
+[2025-07-06 16:55:47,475] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.110.85:5000
+[2025-07-06 16:55:47,476] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-07-06 16:58:15,444] INFO in api_server: 【日志测试】setup_logging已执行，日志文件: D:\Zyq\桌面\stu\stu\logs\api_20250706.log
+[2025-07-06 16:58:15,444] INFO in api_server: 【日志测试】主入口已执行
+[2025-07-06 16:58:15,448] INFO in api_server: 【日志测试】Flask主进程启动
+[2025-07-06 16:58:15,449] INFO in api_server: [自动初始化] 正在检测并创建数据库及表...
+[2025-07-06 16:58:17,812] INFO in api_server: [自动初始化] 数据库和表结构已就绪！
+[2025-07-06 16:58:17,813] INFO in api_server: 正在启动学生数据提取API服务器...
+[2025-07-06 16:58:17,813] INFO in api_server: 可用接口:
+[2025-07-06 16:58:17,813] INFO in api_server:   POST /extract - 提取学生数据
+[2025-07-06 16:58:17,814] INFO in api_server:   GET  /health  - 健康检查
+[2025-07-06 16:58:17,831] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.110.85:5000
+[2025-07-06 16:58:17,832] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-07-06 17:01:27,410] INFO in api_server: 【日志测试】setup_logging已执行，日志文件: D:\Zyq\桌面\stu\stu\logs\api_20250706.log
+[2025-07-06 17:01:27,411] INFO in api_server: 【日志测试】主入口已执行
+[2025-07-06 17:01:27,413] INFO in api_server: 【日志测试】Flask主进程启动
+[2025-07-06 17:01:27,413] INFO in api_server: [自动初始化] 正在检测并创建数据库及表...
+[2025-07-06 17:01:28,980] INFO in api_server: [自动初始化] 数据库和表结构已就绪！
+[2025-07-06 17:01:28,980] INFO in api_server: 正在启动学生数据提取API服务器...
+[2025-07-06 17:01:28,980] INFO in api_server: 可用接口:
+[2025-07-06 17:01:28,981] INFO in api_server:   POST /extract - 提取学生数据
+[2025-07-06 17:01:28,981] INFO in api_server:   GET  /health  - 健康检查
+[2025-07-06 17:01:29,003] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.110.85:5000
+[2025-07-06 17:01:29,003] INFO in _internal: [33mPress CTRL+C to quit[0m
